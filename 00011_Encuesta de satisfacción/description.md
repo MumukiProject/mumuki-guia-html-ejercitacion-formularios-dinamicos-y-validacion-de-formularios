@@ -32,8 +32,8 @@ Una vez que obtengamos las respuestas mostraremos con una alerta el nivel de sat
 
 Por lo que el resultado deberá corresponder al siguiente para el puntaje total:
 
-- **4:** Sumamente insatisfecho
-- **5-6:** Insatisfecho
-- **6-8:** Conforme
-- **8-10:** Satisfecho
-- **11-12:** Muy satisfecho
+- **4:** Muy instisfactorio
+- **5-6:** Insatisfactorio
+- **6-8:** Regular
+- **8-10:** Satisfactorio
+- **11-12:** Muy satisfactorio
