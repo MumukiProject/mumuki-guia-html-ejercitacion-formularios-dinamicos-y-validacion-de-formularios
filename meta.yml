@@ -1,8 +1,9 @@
 ---
-name: Ejercitación Formularios Dinámicos y Validación de Formularios
+name: Formularios Dinámicos
 locale: es
 type: practice
 beta: false
+teacher_info: ''
 language: html
 id_format: "%05d"
 order: []
