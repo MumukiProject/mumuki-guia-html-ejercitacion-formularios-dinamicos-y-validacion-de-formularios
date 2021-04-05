@@ -1,10 +1,6 @@
-Tarjeta de crédito (Validación)
-
-Realizaremos una validación sobre el formulario del ejercicio [Pago](mumukiproject/mumuki-guia-html-ejercitacion-formularios/3).
+¡Continuemos trabajando sobre el formulario de  [Pago](mumukiproject/mumuki-guia-html-ejercitacion-formularios/3)!
 
 Aplicaremos las siguientes validaciones:
-
-
 
 **Paso 1: Campo del número de la tarjeta de crédito.**
 
