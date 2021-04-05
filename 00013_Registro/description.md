@@ -14,12 +14,12 @@ En el caso de que alguno de los inputs no cumpla con las características solici
 Usar las siguientes funciones para validar los datos con expresiones regulares:
 
 ```javascript
-const esEmailValido = (email) => {
+function esEmailValido(email) {
   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   return regex.test(email.toLowerCase())
 }
 
-const esPasswordValida = (password) => {
+function esPasswordValida(password) {
   const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm
   return regex.test(password)
 }
