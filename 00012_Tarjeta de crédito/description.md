@@ -1,6 +1,6 @@
 Tarjeta de crédito (Validación)
 
-Realizaremos una validación sobre el formulario del ejercicio [Pago](https://github.com/Ada-IT/ejercicios-frontend/blob/master/modulo-2/ejercicios/21-formularios.md).
+Realizaremos una validación sobre el formulario del ejercicio [Pago](mumukiproject/mumuki-guia-html-ejercitacion-formularios/3).
 
 Aplicaremos las siguientes validaciones:
 
