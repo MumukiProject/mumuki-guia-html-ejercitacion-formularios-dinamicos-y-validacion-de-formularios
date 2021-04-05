@@ -1,5 +1,7 @@
 ¡Continuemos trabajando sobre el formulario de  [Pago](mumukiproject/mumuki-guia-html-ejercitacion-formularios/3)!
 
+Nota para May: la redacción de este ejercicio es conflictiva, deberíamos restructurarla
+
 Aplicaremos las siguientes validaciones:
 
 **Paso 1: Campo del número de la tarjeta de crédito.**
