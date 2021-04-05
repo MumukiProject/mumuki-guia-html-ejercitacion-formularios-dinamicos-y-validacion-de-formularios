@@ -6,5 +6,9 @@ beta: false
 teacher_info: ''
 language: html
 id_format: "%05d"
-order: []
+order:
+- 1
+- 2
+- 3
+- 4
 private: false
