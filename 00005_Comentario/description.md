@@ -1,10 +1,10 @@
 Creá una página que:
 
-- Tenga un `textarea`, un texto pequeño debajo de este y un botón que diga `Enviar`.
-- El texto comience diciendo `0/240 caracteres`.
-- Cuando se escribe algo en el `textarea`, se actualice el texto para reflejar la cantidad de caracteres restantes.
-- Al presionar el botón, si hay 240 caracteres o menos, se borre el contenido del input y se actualice el texto para que diga `Comentario enviado`.
+- tenga un `textarea`, un texto pequeño debajo de este y un botón que diga `Enviar`;
+- el texto comience diciendo `0/240 caracteres`;
+- cuando se escribe algo en el `textarea`, se actualice el texto para reflejar la cantidad de caracteres restantes;
+- al presionar el botón, si hay 240 caracteres o menos, se borre el contenido del input y se actualice el texto para que diga `Comentario enviado`;
 - El color del borde del `textarea` cambie de la siguiente forma:
-  - normal si está vacío
-  - verde si tiene texto y 240 caracteres o menos
-  - rojo si tiene más de 240 caracters
+  - normal si está vacío;
+  - verde si tiene texto y 240 caracteres o menos;
+  - rojo si tiene más de 240 caracters.
