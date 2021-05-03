@@ -3,8 +3,7 @@
 
 it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", function() {
   document.getElementById("kilometros").value = 1
-  let millas = document.getElementById("millas");
-  assert.equal(millas, 0.62,`La suma debería retornar 5 pero fue ${resultado}`);
+  document.getElementById("millas").value.should.eql(0.62);
 })/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
