@@ -1,9 +1,26 @@
 /*<output#*//*#output>*/
-/*<tests#*/var inputK= document.getElementById("kilometros")
+/*<tests#*//*var inputK= document.getElementById("kilometros")
 
 it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", function() {
   document.getElementById("kilometros").value = 1
   document.getElementById("millas").value.should.eql(0.62);
-})/*#tests>*/
+})*/
+
+describe("DOM API", function() {
+  context("static dom", () => {
+  describe("event handlers", () => {
+    beforeEach(() => {
+      _resetDocument_();
+    });
+
+    it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
+      document.getElementById("kilometros").value = 1
+
+      _dispatch_("keyup");
+
+      document.getElementById("millas").value.should.eql(0.62);
+    });
+  });
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
