@@ -1,30 +1,37 @@
 /*<output#*//*#output>*/
-/*<tests#*//*var inputK = document.getElementById("kilometros")
-
-it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", function() {
-  document.getElementById("kilometros").value = 1
-  
-  document.getElementById("millas").value.should.eql(0.62);
-})*/
-
-
-describe("DOM API", function() {
-  // you can validate the static structure of the DOM...
-  context("static dom", () => {
-
-    describe("event handlers", () => {
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
       beforeEach(() => {
         _resetDocument_();
       });
-
+      
       it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
         let kilometros = document.getElementById("kilometros");
-        
         kilometros.value = 1;
-        
         _dispatch_("change",  kilometros);
-
         document.getElementById("millas").value.should.eql("0.62");
+      });
+      
+      it("Si ingresamos 2 en el input de los kilómetros, el input de millas muestra 1.24", () => {
+        let kilometros = document.getElementById("kilometros");
+        kilometros.value = 2;
+        _dispatch_("change",  kilometros);
+        document.getElementById("millas").value.should.eql("1.24");
+      });
+      
+      it("Si ingresamos 1 en el input de las millas, el input de kilometros muestra 1.61", () => {
+        let millas = document.getElementById("millas");
+        millas.value = 1;
+        _dispatch_("change",  millas);
+        document.getElementById("kilometros").value.should.eql("1.61");
+      });
+      
+      it("Si ingresamos 2 en el input de las millas, el input de kilometros muestra 3.22", () => {
+        let millas = document.getElementById("millas");
+        millas.value = 2;
+        _dispatch_("change",  millas);
+        document.getElementById("kilometros").value.should.eql("3.22");
       });
     });
   });  
