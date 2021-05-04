@@ -1,10 +1,12 @@
 /*<output#*//*#output>*/
-/*<tests#*//*var inputK= document.getElementById("kilometros")
+/*<tests#*//*var inputK = document.getElementById("kilometros")
 
 it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", function() {
   document.getElementById("kilometros").value = 1
+  
   document.getElementById("millas").value.should.eql(0.62);
 })*/
+
 
 describe("DOM API", function() {
   // you can validate the static structure of the DOM...
@@ -18,7 +20,7 @@ describe("DOM API", function() {
       it("inserts dom elements after a single event", () => {
         document.getElementById("kilometros").value = 1
 
-        _dispatch_("keyup");
+        _dispatch_("change", function() {});
 
         document.getElementById("millas").value.should.eql(0.62);
       });
