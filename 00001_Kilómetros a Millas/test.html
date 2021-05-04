@@ -18,7 +18,9 @@ describe("DOM API", function() {
       });
 
       it("inserts dom elements after a single event", () => {
-        let kilometros = document.getElementById("kilometros").value = 1
+        let kilometros = document.getElementById("kilometros");
+        
+        kilometros.value = 1
 
         _dispatch_("change", kilometros);
 
