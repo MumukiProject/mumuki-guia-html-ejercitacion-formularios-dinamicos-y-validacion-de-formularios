@@ -21,11 +21,7 @@ describe("DOM API", function() {
         let kilometros = document.getElementById("kilometros");
         
         kilometros.value = 1;
-        //kilometros.change();
-        //_dispatch_("change", kilometros);
-        $("kilometros").trigger("change");
-        //var event = new Event('change');
-        //kilometros.dispatchEvent(event);
+        _dispatch_("change", kilometros);
 
         document.getElementById("millas").value.should.eql(0.62);
       });
