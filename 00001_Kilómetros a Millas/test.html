@@ -20,11 +20,11 @@ describe("DOM API", function() {
       it("inserts dom elements after a single event", () => {
         let kilometros = document.getElementById("kilometros");
         
-        kilometros.value = 1
+        kilometros.value = 1;
+        kilometros.change();
+        //_dispatch_("change", kilometros);
 
-        _dispatch_("change", kilometros);
-
-        document.getElementById("kilometros").value.should.eql(0.62);
+        document.getElementById("millas").value.should.eql(0.62);
       });
     });
   });  
