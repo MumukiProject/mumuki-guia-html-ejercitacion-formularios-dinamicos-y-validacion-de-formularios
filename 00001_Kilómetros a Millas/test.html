@@ -20,7 +20,7 @@ describe("DOM API", function() {
       it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
         let kilometros = document.getElementById("kilometros");
         
-        kilometros.addEventListener("change", () => {})
+        kilometros.addEventListener("change", () => {kilonetros.value = 1 })
         
         kilometros.value = 1;
         _dispatch_("change", kilometros);
