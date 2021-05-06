@@ -19,7 +19,7 @@
         
         backgroundColor = document.body.style.backgroundColor;
         
-        backgroundColor.should.eql("rgb(250,0,0)");
+        backgroundColor.replace(/\s/g, '').should.eql("rgb(250,0,0)");
       });
 
     });
