@@ -9,7 +9,6 @@
       it("Si ingresamos 1 tarea nuestra lista TO-DO tiene un elemento", () => {
         let input = document.getElementById("input");
         let boton = document.getElementById("boton");
-        let list = document.getElementById("list");
         input.value = 'pagar servicios';
         _dispatch_("click",  boton);
         document.getElementById("list").length.should.eql(1);
