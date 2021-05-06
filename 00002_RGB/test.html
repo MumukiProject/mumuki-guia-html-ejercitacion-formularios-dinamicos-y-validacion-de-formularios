@@ -7,32 +7,12 @@
       });
       
       it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
-        let kilometros = document.getElementById("kilometros");
-        kilometros.value = 1;
-        _dispatch_("change",  kilometros);
-        document.getElementById("millas").value.should.eql("0.62");
+        let red = document.getElementById("red");
+        red.value = 255;
+        _dispatch_("change",  red);
+        document.querySelector("body").style.backgroundColor.should.eql("rgb(255, 0, 0)");
       });
-      
-      it("Si ingresamos 2 en el input de los kilómetros, el input de millas muestra 1.24", () => {
-        let kilometros = document.getElementById("kilometros");
-        kilometros.value = 2;
-        _dispatch_("change",  kilometros);
-        document.getElementById("millas").value.should.eql("1.24");
-      });
-      
-      it("Si ingresamos 1 en el input de las millas, el input de kilometros muestra 1.61", () => {
-        let millas = document.getElementById("millas");
-        millas.value = 1;
-        _dispatch_("change",  millas);
-        document.getElementById("kilometros").value.should.eql("1.61");
-      });
-      
-      it("Si ingresamos 2 en el input de las millas, el input de kilometros muestra 3.22", () => {
-        let millas = document.getElementById("millas");
-        millas.value = 2;
-        _dispatch_("change",  millas);
-        document.getElementById("kilometros").value.should.eql("3.22");
-      });
+
     });
   });  
 });/*#tests>*/
