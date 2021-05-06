@@ -8,9 +8,10 @@
       
       it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
         let red = document.getElementById("red");
+        let body = document.querySelector("body")
         red.value = 255;
         _dispatch_("change",  red);
-        document.querySelector("body").style.backgroundColor.should.eql("rgb(255, 0, 0)");
+        body.style.backgroundColor.should.eql("rgb(255, 0, 0)");
       });
 
     });
