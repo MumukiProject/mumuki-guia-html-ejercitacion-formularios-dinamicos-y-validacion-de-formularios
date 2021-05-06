@@ -22,6 +22,17 @@
 
         document.getElementsByTagName("img").should.have.length(2);
       });
+      
+      it("Si ingresamos dos imágenes y luego hacemos click sobre una de ellas, el contenedor tiene una imagen", () => {
+        const button = document.getElementsByTagName("button")[0];
+
+        _dispatch_("click", button);
+        _dispatch_("click", button);
+        
+        const firstImage = document.getElementsByTagName("image")[0];
+
+        document.getElementsByTagName("img").should.have.length(1);
+      });
     });
   });  
 });
