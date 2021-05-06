@@ -11,7 +11,7 @@
         let boton = document.querySelector("boton");
         input.value = 'pagar servicios';
         _dispatch_("click",  boton);
-        document.getElementsByTagName("input").value.should.eql('');
+        document.getElementsById("input").value.should.eql('');
       });
       it("Al ingresar dos tareas la lista tiene dos elementos ", () => {
         let input = document.querySelector("input");
@@ -21,7 +21,7 @@
         input.value = 'pagar servicios';
         _dispatch_("click",  boton);
         
-        document.getElementsByTagName("li").length.should.eql(2);
+        document.getElementsById("li").length.should.eql(2);
       });
       
     });
