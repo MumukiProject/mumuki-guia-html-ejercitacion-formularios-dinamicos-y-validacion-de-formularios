@@ -8,8 +8,8 @@
       
       it("Si ingresamos 255, 0, 0 el color del body es rgb(250, 0, 0)", () => {
         let red = document.getElementsByTagName("input")[0];
-        let green = document.getElementById("green");
-        let blue = document.getElementById("blue");
+        let green = document.getElementsByTagName("input")[1];
+        let blue = document.getElementsByTagName("input")[2];
         red.value = 250;
         green.value = 0;
         blue.value = 0;
