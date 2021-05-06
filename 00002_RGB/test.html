@@ -16,7 +16,12 @@
         _dispatch_("change",  red);
         _dispatch_("change",  green);
         _dispatch_("change",  blue);
-        document.body.should.have.style("background-color","rgb(250, 0, 0)");
+        
+        backgroundColor = document.body.style.backgroundColor;
+        
+        backbackgroundColor.should.eql("rgb(250, 0, 0)");
+        
+        //document.body.should.have.style("background-color","rgb(250, 0, 0)");
       });
 
     });

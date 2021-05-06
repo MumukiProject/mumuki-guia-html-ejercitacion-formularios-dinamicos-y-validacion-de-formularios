@@ -6,10 +6,10 @@
         _resetDocument_();
       });
       
-      it("Al ingresar una imagen el valor del input se borra", () => {
+      it("Al ingresar una tarea el valor del input se borra", () => {
         let input = document.querySelectorAll("input")[0];
         let boton = document.querySelectorAll("button")[0];
-        input.value = 'https://pbs.twimg.com/profile_images/1149306972640022528/X9v3aY8t.png';
+        input.value = 'pagar servicios';
         _dispatch_("click",  boton);
         document.getElementById("input").value.should.eql('');
       });
