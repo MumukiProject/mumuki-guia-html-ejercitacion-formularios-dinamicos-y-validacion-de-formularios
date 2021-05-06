@@ -7,7 +7,7 @@
       });
       
       it("Al ingresar una tarea el valor del input se borra", () => {
-        let input = document.getElementById("input");
+        let input = document.querySelectorAll("input")[0];
         let boton = document.getElementById("boton");
         input.value = 'pagar servicios';
         _dispatch_("click",  boton);
