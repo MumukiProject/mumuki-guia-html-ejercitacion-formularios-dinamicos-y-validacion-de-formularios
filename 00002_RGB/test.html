@@ -10,13 +10,13 @@
         let red = document.getElementById("red");
         let green = document.getElementById("green");
         let blue = document.getElementById("blue");
-        red.value = 255;
+        red.value = 250;
         green.value = 0;
         blue.value = 0;
         _dispatch_("change",  red);
         _dispatch_("change",  green);
         _dispatch_("change",  blue);
-        document.querySelector("body").style.backgroundColor.should.eql("rgb(255, 0, 0)");
+        document.querySelector("body").style.backgroundColor.should.eql("rgb(250, 0, 0)");
       });
 
     });
