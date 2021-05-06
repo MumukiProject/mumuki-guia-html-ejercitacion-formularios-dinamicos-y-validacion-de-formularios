@@ -9,18 +9,18 @@
       it("Al ingresar una imagen el valor del input se borra", () => {
         let input = document.getElementsByTagName("input")[0];
         let boton = document.getElementsByTagName("button")[0];
-        input.value = 'p';
+        input.value = 'img';
         _dispatch_("click",  boton);
         document.getElementsByTagName("input")[0].value.should.eql('');
       });
       it("Al ingresar dos imágenes el contenedor tiene dos imágenes", () => {
         let input = document.getElementsByTagName("input")[0];
         let boton = document.getElementsByTagName("button")[0];
-        input.value = 'p';
+        input.value = 'img';
         _dispatch_("click",  boton);
-        input.value = 'p';
+        input.value = 'img';
         _dispatch_("click",  boton);
-        document.getElementsByTagName("div")[0].length.should.eql('2');
+        document.getElementsByTagName("img").length.should.eql('2');
       });
       
     });
