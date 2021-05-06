@@ -14,11 +14,12 @@
         document.getElementsByTagName("input")[0].value.should.eql('');
       });
       it("Al ingresar dos imágenes el contenedor tiene dos imágenes", () => {
+        let imagen = document.createElement("IMG");
         let input = document.getElementsByTagName("input")[0];
         let boton = document.getElementsByTagName("button")[0];
-        input.value = 'img';
+        input.value = imagen;
         _dispatch_("click",  boton);
-        input.value = 'img';
+        input.value = imagen;
         _dispatch_("click",  boton);
         document.getElementsByTagName("img").length.should.eql(2);
       });
