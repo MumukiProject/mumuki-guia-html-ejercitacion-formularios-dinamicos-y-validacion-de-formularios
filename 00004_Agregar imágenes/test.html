@@ -22,7 +22,15 @@
         _dispatch_("click",  boton);
         document.getElementsByTagName("img").length.should.eql(2);
       });
-      
+        it("Si ingresamos dos imágenes y luego hacemos click sobre una de ellas, el contenedor tiene una imagen", () => {
+        let input = document.getElementsByTagName("input")[0];
+        let boton = document.getElementsByTagName("button")[0];
+        input.value = 'img';
+        _dispatch_("click",  boton);
+        input.value = 'img';
+        _dispatch_("click",  img);
+        document.getElementsByTagName("img").length.should.eql(2);
+      });
     });
   });  
 });  /*#tests>*/
