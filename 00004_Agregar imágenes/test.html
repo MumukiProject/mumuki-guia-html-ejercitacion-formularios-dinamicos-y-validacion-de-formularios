@@ -13,6 +13,7 @@
         _dispatch_("click",  boton);
         document.getElementsByTagName("input")[0].value.should.eql('');
       });
+      
       it("Al ingresar dos imágenes el contenedor tiene dos imágenes", () => {
         let imagen = document.createElement("IMG");
         let input = document.getElementsByTagName("input")[0];
@@ -23,6 +24,7 @@
         _dispatch_("click",  boton);
         document.getElementsByTagName("img").length.should.eql(2);
       });
+      
         it("Si ingresamos dos imágenes y luego hacemos click sobre una de ellas, el contenedor tiene una imagen", () => {
         let imagen = document.createElement("IMG");
         let input = document.getElementsByTagName("input")[0];
@@ -32,6 +34,8 @@
         input.value = imagen;
         _dispatch_("click",  imagen);
         document.getElementsByTagName("img").length.should.eql(1);
+        
+        
       });
     });
   });  
