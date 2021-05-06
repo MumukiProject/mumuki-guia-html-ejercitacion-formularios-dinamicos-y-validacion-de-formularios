@@ -16,7 +16,7 @@
         _dispatch_("change",  red);
         _dispatch_("change",  green);
         _dispatch_("change",  blue);
-        document.querySelector("body").should.have.style("background-color","rgb(250,0,0)");
+        document.querySelectorAll("body")[0].should.have.style("background-color","rgb(250,0,0)");
       });
 
     });
