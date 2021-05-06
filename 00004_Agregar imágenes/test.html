@@ -13,6 +13,15 @@
 
         document.getElementsByTagName("img").should.have.length(1);
       });
+      
+      it("Al ingresar dos imágenes el contenedor tiene dos imágenes", () => {
+        const button = document.getElementsByTagName("button")[0];
+
+        _dispatch_("click", button);
+        _dispatch_("click", button);
+
+        document.getElementsByTagName("img").should.have.length(2);
+      });
     });
   });  
 });
