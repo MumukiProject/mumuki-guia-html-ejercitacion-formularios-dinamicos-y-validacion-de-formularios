@@ -1,4 +1,31 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Al ingresar una tarea el valor del input se borra", () => {
+        let input = document.querySelectorAll("input")[0];
+        let boton = document.querySelectorAll("button")[0];
+        input.value = 'pagar servicios';
+        _dispatch_("click",  boton);
+        document.getElementById("input").value.should.eql('');
+      });
+      it("Al ingresar dos tareas la lista tiene dos elementos ", () => {
+        let input = document.querySelectorAll("input")[0];
+        let boton = document.querySelectorAll("button")[0];
+        input.value = 'pagar servicios';
+        _dispatch_("click",  boton);
+        input.value = 'pagar servicios';
+        _dispatch_("click",  boton);
+        
+        document.getElementsByTagName("li").length.should.eql(2);
+      });
+      
+    });
+  });  
+});  /*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
