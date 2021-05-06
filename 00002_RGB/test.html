@@ -7,7 +7,7 @@
       });
       
       it("Si ingresamos 255, 0, 0 el color del body es rgb(250, 0, 0)", () => {
-        let red = document.getElementById("red");
+        let red = document.getElementsByTagName("input")[0];
         let green = document.getElementById("green");
         let blue = document.getElementById("blue");
         red.value = 250;
