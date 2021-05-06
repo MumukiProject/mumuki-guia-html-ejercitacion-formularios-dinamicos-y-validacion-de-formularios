@@ -6,33 +6,15 @@
         _resetDocument_();
       });
       
-      it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
-        let kilometros = document.getElementById("kilometros");
-        kilometros.value = 1;
-        _dispatch_("change",  kilometros);
-        document.getElementById("millas").value.should.eql("0.62");
+      it("Si ingresamos 1 tarea nuestra lista TO-DO tiene un elemento", () => {
+        let input = document.getElementById("input");
+        let boton = document.getElementById("boton");
+        let list = document.getElementById("list");
+        input.value = 'pagar servicios';
+        _dispatch_("click",  boton);
+        document.getElementById("list").length.should.eql("1");
       });
       
-      it("Si ingresamos 2 en el input de los kilómetros, el input de millas muestra 1.24", () => {
-        let kilometros = document.getElementById("kilometros");
-        kilometros.value = 2;
-        _dispatch_("change",  kilometros);
-        document.getElementById("millas").value.should.eql("1.24");
-      });
-      
-      it("Si ingresamos 1 en el input de las millas, el input de kilometros muestra 1.61", () => {
-        let millas = document.getElementById("millas");
-        millas.value = 1;
-        _dispatch_("change",  millas);
-        document.getElementById("kilometros").value.should.eql("1.61");
-      });
-      
-      it("Si ingresamos 2 en el input de las millas, el input de kilometros muestra 3.22", () => {
-        let millas = document.getElementById("millas");
-        millas.value = 2;
-        _dispatch_("change",  millas);
-        document.getElementById("kilometros").value.should.eql("3.22");
-      });
     });
   });  
 });/*#tests>*/
