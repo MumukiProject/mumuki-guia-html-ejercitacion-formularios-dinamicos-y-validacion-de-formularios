@@ -7,6 +7,23 @@
       });
       
       it("Al ingresar una imagen el valor del input se borra", () => {
+        const button = document.getElementsByTagName("button")[0];
+
+        _dispatch_("click", button);
+
+        document.getElementsByTagName("img").should.have.length(1);
+      });
+    });
+  });  
+});
+/*describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Al ingresar una imagen el valor del input se borra", () => {
         let input = document.getElementsByTagName("input")[0];
         let boton = document.getElementsByTagName("button")[0];
         input.value = 'img';
@@ -39,6 +56,6 @@
       });
     });
   });  
-});  /*#tests>*/
+}); *//*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
