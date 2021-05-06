@@ -11,7 +11,7 @@
         let boton = document.getElementByTagName("button")[0];
         input.value = 'p';
         _dispatch_("click",  boton);
-        document.getElementById("input").value.should.eql('');
+        document.getElementByTagName("input")[0].value.should.eql('');
       });
       
     });
