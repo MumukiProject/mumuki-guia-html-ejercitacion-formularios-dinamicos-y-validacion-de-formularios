@@ -21,7 +21,7 @@
         input.value = 'pagar servicios';
         _dispatch_("click",  boton);
         
-        document.querySelector("li").length.should.eql(2);
+        document.getElementsByTagName("li").length.should.eql(2);
       });
       
     });
