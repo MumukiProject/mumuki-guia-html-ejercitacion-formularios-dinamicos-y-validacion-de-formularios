@@ -18,7 +18,7 @@
         let texto = document.getElementsByTagName("textarea")[0];
         let boton = document.getElementsByTagName('button')[0];
         texto.value = 'Esta es una cadena de 35 caracteres';
-        _dispatch_("change",  text);
+        _dispatch_("change",  texto);
         document.getElementsByTagName('span')[0].value.should.eq("205 caracteres");
       });
       
