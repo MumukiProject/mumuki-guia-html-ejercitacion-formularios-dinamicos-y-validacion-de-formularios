@@ -19,7 +19,7 @@
         let boton = document.getElementsByTagName('button')[0];
         text.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("change",  text);
-        document.getElementsByTagName('p')[0].value.should.eq("205 caracteres");
+        document.getElementsByTagName('p')[0].should.have.trimmed.text("205 caracteres");
       });
       
     });
