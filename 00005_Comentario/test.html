@@ -1,4 +1,20 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
+        let text = document.getElementsByTagName("textarea")[0];
+        text.value = 'Esta es una cadena de 35 caracteres';
+        _dispatch_("change",  text);
+        text.length.should.eql(35);
+      });
+      
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
