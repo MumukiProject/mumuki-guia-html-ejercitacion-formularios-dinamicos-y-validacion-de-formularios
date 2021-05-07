@@ -1,4 +1,4 @@
-Creá una página que:
+Queremos crear una página que nos permita enviar comentarios :speech_balloon:, se espera que la misma:
 
 - tenga un `textarea`, un texto pequeño debajo de este y un botón que diga `Enviar`;
 - el texto comience diciendo `0/240 caracteres`;
@@ -8,3 +8,5 @@ Creá una página que:
   - normal si está vacío;
   - verde si tiene texto y 240 caracteres o menos;
   - rojo si tiene más de 240 caracters.
+
+> Creá el código HTML y javascript que acabamos de describir.
