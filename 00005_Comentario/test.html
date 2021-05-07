@@ -20,7 +20,7 @@
         let boton = document.getElementsByTagName('button')[0];
         texto.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("change",  texto);
-        document.getElementsByTagName('span')[0].should.have.trimmed.text("205 caracteres");
+        document.getElementsByTagName('span')[0].should.have.trimmed.text("205/240 caracteres");
       });
       
     });
