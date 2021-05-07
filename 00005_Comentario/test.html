@@ -8,9 +8,10 @@
       
       it("Si ingresamos 1 en el input de los kilómetros, el input de millas muestra 0.62", () => {
         let text = document.getElementsByTagName("textarea")[0];
+        let parrafo = document.getElementsByTagName('p')[0];
         text.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("change",  text);
-        text.length.should.eql(35);
+        parrafo.should.have.trimmed.text("205 caracteres");
       });
       
     });
