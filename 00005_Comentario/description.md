@@ -10,4 +10,4 @@ Queremos crear una página que nos permita enviar comentarios :speech_balloon:, 
   - verde si tiene texto y 240 caracteres o menos;
   - rojo si tiene más de 240 caracteres.
 
-> Creá el código HTML y javascript que acabamos de describir.
+> Creá el código HTML y JavaScript que acabamos de describir.
