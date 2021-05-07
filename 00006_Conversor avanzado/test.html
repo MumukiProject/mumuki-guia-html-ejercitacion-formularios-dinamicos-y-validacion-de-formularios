@@ -12,8 +12,8 @@
         let aConvertir = document.getElementsByTagName('select')[0];
         let convertido = document.getElementsByTagName('select')[1];
         input.value = 1;
-        convertido.value = 1;
-        aConvertir.value = 0.01;
+        convertido.value = 0.01;
+        aConvertir.value = 1;
         _dispatch_("click",  boton);
         document.getElementById("parrafo").should.have.trimmed.text("100");
       });
