@@ -10,6 +10,7 @@
         let text = document.getElementsByTagName("textarea")[0];
         text.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("change",  text);
+        _dispatch_("change",  document.querySelector('body'));
         document.getElementsByTagName('p')[0].should.have.trimmed.text("205 caracteres");
       });
       
