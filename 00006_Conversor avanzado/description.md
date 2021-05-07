@@ -19,7 +19,7 @@ Necesitamos crear una página que nos ayude a convertir valores de distancia :st
 
 **TIP**
 
-Para realizar este ejercicio, el `value` de cada option del `select` deben ser los siguiente:
+Para realizar este ejercicio, el `value` de cada option del `select` deben ser los siguientes:
 
 - para `Kilómetros`, el value debe ser `1000`;
 - para `Metros`, el value debe ser `1`;
