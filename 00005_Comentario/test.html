@@ -11,6 +11,7 @@
         let boton = document.getElementsByTagName('button')[0];
         text.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("click",  boton);
+        _dispatch_("change",  text);
         //document.getElementsByTagName('p')[0].should.have.trimmed.text("Comentario enviado");
         document.getElementsByTagName('textarea')[0].should.have.trimmed.text('Esta es una cadena de 35 caracteres');
       });
