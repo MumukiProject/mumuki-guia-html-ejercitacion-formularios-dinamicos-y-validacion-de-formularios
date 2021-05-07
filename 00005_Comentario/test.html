@@ -6,12 +6,20 @@
         _resetDocument_();
       });
       
-      it("Si ", () => {
+      it("Si enviamos un comentario de menos de 240 caracteres se muestra Comentario enviado", () => {
         let text = document.getElementsByTagName("textarea")[0];
         let boton = document.getElementsByTagName('button')[0];
         text.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("click",  boton);
         document.getElementsByTagName('p')[0].should.have.trimmed.text("Comentario enviado");
+      });
+      
+        it("Si enviamos un comentario de menos de 35 caracteres el textarea muestra 205 caracteres", () => {
+        let text = document.getElementsByTagName("textarea")[0];
+        let boton = document.getElementsByTagName('button')[0];
+        text.value = 'Esta es una cadena de 35 caracteres';
+        _dispatch_("change",  text);
+        document.getElementsByTagName('textarea')[0].value.should.eq("Esta es una cadena de 35 caracteres");
       });
       
     });
