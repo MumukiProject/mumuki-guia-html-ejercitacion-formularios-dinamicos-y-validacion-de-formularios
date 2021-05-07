@@ -7,17 +7,17 @@
       });
       
       it("Si enviamos un comentario de menos de 240 caracteres se muestra Comentario enviado", () => {
-        let text = document.getElementsByTagName("textarea")[0];
+        let texto = document.getElementsByTagName("textarea")[0];
         let boton = document.getElementsByTagName('button')[0];
-        text.value = 'Esta es una cadena de 35 caracteres';
+        texto.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("click",  boton);
-        document.getElementsByTagName('p')[0].should.have.trimmed.text("Comentario enviado");
+        document.getElementsByTagName('span')[0].should.have.trimmed.text("Comentario enviado");
       });
       
-        it("Si enviamos un comentario de menos de 35 caracteres el textarea muestra 205 caracteres", () => {
-        let text = document.getElementsByTagName("span")[0];
+      it("Si enviamos un comentario de menos de 35 caracteres el textarea muestra 205 caracteres", () => {
+        let texto = document.getElementsByTagName("textarea")[0];
         let boton = document.getElementsByTagName('button')[0];
-        text.value = 'Esta es una cadena de 35 caracteres';
+        texto.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("change",  text);
         document.getElementsByTagName('span')[0].value.should.eq("205 caracteres");
       });
