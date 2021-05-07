@@ -15,11 +15,11 @@
       });
       
         it("Si enviamos un comentario de menos de 35 caracteres el textarea muestra 205 caracteres", () => {
-        let text = document.getElementsByTagName("textarea")[0];
+        let text = document.getElementsByTagName("span")[0];
         let boton = document.getElementsByTagName('button')[0];
         text.value = 'Esta es una cadena de 35 caracteres';
         _dispatch_("change",  text);
-        document.getElementsByTagName('textarea')[1].value.should.eq("205 caracteres");
+        document.getElementsByTagName('span')[0].value.should.eq("205 caracteres");
       });
       
     });
