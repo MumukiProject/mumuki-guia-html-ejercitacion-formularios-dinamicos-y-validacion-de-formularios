@@ -24,3 +24,4 @@ function esPasswordValida(password) {
   return regex.test(password)
 }
 ```
+> Creá el código HTML y JavaScript que acabamos de describir.

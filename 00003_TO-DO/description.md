@@ -4,4 +4,4 @@ Necesitamos crear una página para enlistar nuestras tareas :notepad_spiral:, se
 - al presionar el botón, _si el `input` no está vacío_, se agregue un ítem a la lista con el contenido del `input` y se borre el contenido del `input`.
 
 
-> Creá el código HTML y javascript que acabamos de describir.
+> Creá el código HTML y JavaScript que acabamos de describir.

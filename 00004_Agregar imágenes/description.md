@@ -4,4 +4,4 @@ Queremos crear una página que nos permita agregar imágenes :milky_way: en ella
 - al presionar el botón, _si el `input` no está vacío_, se agregue una imagen al contenedor cuyo `src` es el contenido del `input` y se borre el contenido del `input`;
 - al hacer click en una imagen, esta se elimine.
 
-> Creá el código HTML y javascript que acabamos de describir.
+> Creá el código HTML y JavaScript que acabamos de describir.

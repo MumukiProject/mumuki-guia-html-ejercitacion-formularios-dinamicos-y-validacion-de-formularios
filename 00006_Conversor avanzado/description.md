@@ -30,4 +30,4 @@ Para realizar este ejercicio, el `value` de cada option del `select` deben ser l
 
 La conversión se realiza con la fórmula: `VALOR_INGRESADO * VALOR_UNIDAD / VALOR_UNIDAD_A_CONVERTIR`.
 
-> Creá el código HTML y javascript que acabamos de describir.
+> Creá el código HTML y JavaScript que acabamos de describir.

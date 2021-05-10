@@ -4,4 +4,4 @@ Vamos a crear una página que nos ayude a formar distintos colores :art:, se esp
 - todos los `input`s comiencen con el valor 255;
 - cuando se modifica algún `input`, se cambie el color de fondo del `body` con el color que se forma a partir de dichos valores.
 
-> Creá el código HTML y javascript que acabamos de describir.
+> Creá el código HTML y JavaScript que acabamos de describir.

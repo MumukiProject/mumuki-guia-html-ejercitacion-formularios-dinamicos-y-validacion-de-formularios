@@ -1,5 +1,5 @@
-Debemos crear una encuesta de satisfacción al cliente para un portal de ventas basado en 4 preguntas que nos determinará qué tan contento está el cliente con nuestro servicio.
-Las respuestas deben ser radio buttons y cada grupo responderá a una pregunta específica.
+Necesitamos crear una encuesta de satisfacción al cliente para un portal de ventas basado en 4 preguntas que nos determinará el grado de satifacción con nuestro servicio :page_facing_up:.
+Las respuestas deben ser radio buttons y cada grupo responderá a las siguientes preguntas: 
 
 1. **¿Qué tan rápido solucionamos tu problema?**
 
@@ -30,10 +30,12 @@ Una vez que obtengamos las respuestas mostraremos con una alerta el nivel de sat
 - Las respuestas neutras un valor de 2
 - Mientras que las respuestas positivas un valor de 3.
 
-Por lo que el resultado deberá corresponder al siguiente para el puntaje total:
+Por lo que el resultado deberá corresponder a la siguiente tabla para el puntaje total:
 
 - **4:** Muy instisfactorio
 - **5-6:** Insatisfactorio
 - **6-8:** Regular
 - **8-10:** Satisfactorio
 - **11-12:** Muy satisfactorio
+
+> Creá el código HTML y JavaScript que acabamos de describir.
