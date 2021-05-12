@@ -2,13 +2,18 @@
 /*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
+      let img1;
+      let img2;
+      let img3;
+      let img4;
+      let select;
       beforeEach(() => {
         _resetDocument_();
-        let img1= document.createElement('IMG');
-        let img2= document.createElement('IMG');
-        let img3= document.createElement('IMG');
-        let img4= document.createElement('IMG');
-        let select= document.getElementsByTagName('select')[0];
+        img1= document.createElement('IMG');
+        img2= document.createElement('IMG');
+        img3= document.createElement('IMG');
+        img4= document.createElement('IMG');
+        select= document.getElementsByTagName('select')[0];
         
         img1.setAttribute('alt','animales');
         img2.setAttribute('alt','comida');
