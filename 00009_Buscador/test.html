@@ -38,7 +38,7 @@
          input.value= 'pan';
         _dispatch_("change", input);
 
-        img1.should.have.style('color','rgb(255, 0, 0)');
+        img1.color.should.eql('color','rgb(255, 0, 0)');
         /*
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
