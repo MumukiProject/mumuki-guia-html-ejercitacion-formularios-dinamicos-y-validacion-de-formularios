@@ -1,5 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*//*describe("", function() {
+/*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
       let img1;
@@ -21,57 +21,7 @@
         input= document.querySelector('input');
         
         img1.setAttribute('alt','panda');
-        img2.setAttribute('alt','theo');
-        img3.setAttribute('alt','mumuki');
-        img4.setAttribute('alt','interfaz');
-        img5.setAttribute('alt','pangea');
-        img6.setAttribute('alt','mumu');
-        img7.setAttribute('alt','pandora');
-        img8.setAttribute('alt','interno');
-        img9.setAttribute('alt','thor');
-        
-      it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
-
-        input.value= 'pan';
-        _dispatch_("change", input);
-
-        document.getElementsByTagName("img")[0].should.have.style("visibility", "visible");
-        document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[3].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[4].should.have.style("visibility", "visible");
-        document.getElementsByTagName("img")[5].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[6].should.have.style("visibility", "visible");
-        document.getElementsByTagName("img")[7].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[8].should.have.style("visibility", "hidden");
-      });
-      
-    });
-  });  
-});*/
-
-describe("", function() {
-  context("", () => {
-    describe("", () => {
-      let img1;
-      let img2;
-      let img3;
-      let img4;
-      let input;
-      beforeEach(() => {
-        _resetDocument_();
-        img1= document.createElement('IMG');
-        img2= document.createElement('IMG');
-        img3= document.createElement('IMG');
-        img4= document.createElement('IMG');
-        img5= document.createElement('IMG');
-        img6= document.createElement('IMG');
-        img7= document.createElement('IMG');
-        img8= document.createElement('IMG');
-        img9= document.createElement('IMG');
-        input= document.querySelector('input');
-        
-        img1.setAttribute('alt','panda');
+        img1.setAttribute('color','rgb(255, 0, 0)');
         img2.setAttribute('alt','theo');
         img3.setAttribute('alt','mumuki');
         img4.setAttribute('alt','interfaz');
@@ -88,7 +38,7 @@ describe("", function() {
          input.value= 'pan';
         _dispatch_("change", input);
 
-        img1.should.have.style("visibility", "visible");
+        img1.should.have.style("color", "'color','rgb(255, 0, 0)'");
         /*
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
