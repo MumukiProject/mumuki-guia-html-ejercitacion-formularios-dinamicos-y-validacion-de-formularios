@@ -2,32 +2,37 @@
 /*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
+      let img1;
+      let img2;
+      let img3;
+      let img4;
+      let select;
       beforeEach(() => {
         _resetDocument_();
-
-      
-      it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
-        let img1= document.createElement('IMG');
-        let img2= document.createElement('IMG');
-        let img3= document.createElement('IMG');
-        let img4= document.createElement('IMG');
-        let img5= document.createElement('IMG');
-        let img6= document.createElement('IMG');
-        let img7= document.createElement('IMG');
-        let img8= document.createElement('IMG');
-        let img9= document.createElement('IMG');
-        let select= document.getElementsByTagName('select')[0];
+        img1= document.createElement('IMG');
+        img2= document.createElement('IMG');
+        img3= document.createElement('IMG');
+        img4= document.createElement('IMG');
+        img5= document.createElement('IMG');
+        img6= document.createElement('IMG');
+        img7= document.createElement('IMG');
+        img8= document.createElement('IMG');
+        img9= document.createElement('IMG');
+        select= document.getElementsByTagName('select')[0];
         
         img1.dataset.categoria ='animales';
         img2.dataset.categoria ='comida';
         img3.dataset.categoria ='paisajes';
         img4.dataset.categoria ='animales';
-        img5.dataset.categoria ='paisajes';
-        img6.dataset.categoria ='paisajes';
-        img7.dataset.categoria ='paisajes';
-        img8.dataset.categoria ='paisajes';
-        img9.dataset.categoria ='paisajes';
+        img5.dataset.categoria ='animales';
+        img6.dataset.categoria ='animales';
+        img7.dataset.categoria ='animales';
+        img8.dataset.categoria ='animales';
+        img9.dataset.categoria ='animales';
       });
+      
+      it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
+
         select.value= 'animales';
         _dispatch_("change", select);
 
@@ -35,11 +40,6 @@
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[4].should.have.style("visibility", "visible");
-        document.getElementsByTagName("img")[5].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[6].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[7].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[8].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[9].should.have.style("visibility", "hidden");
       });
       
     });
