@@ -13,23 +13,24 @@
         img2= document.createElement('IMG');
         img3= document.createElement('IMG');
         img4= document.createElement('IMG');
-        img5= document.createElement('IMG');
+        /*img5= document.createElement('IMG');
         img6= document.createElement('IMG');
         img7= document.createElement('IMG');
         img8= document.createElement('IMG');
-        img9= document.createElement('IMG');
+        img9= document.createElement('IMG');*/
         input= document.querySelector('input');
         
         img1.setAttribute('alt','panda');
+        img1.setAttribute('id', 'panda');
         img1.setAttribute('color','rgb(255, 0, 0)');
         img2.setAttribute('alt','theo');
         img3.setAttribute('alt','mumuki');
         img4.setAttribute('alt','interfaz');
-        img5.setAttribute('alt','pangea');
+        /*img5.setAttribute('alt','pangea');
         img6.setAttribute('alt','mumu');
         img7.setAttribute('alt','pandora');
         img8.setAttribute('alt','interno');
-        img9.setAttribute('alt','thor');
+        img9.setAttribute('alt','thor');*/
 
       });
       
@@ -38,7 +39,7 @@
          input.value= 'pan';
         _dispatch_("change", input);
 
-        img1.color.should.eql('color','rgb(255, 0, 0)');
+        documente.getElementById('panda').should.have.style('color','rgb(255, 0, 0)');
         /*
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
