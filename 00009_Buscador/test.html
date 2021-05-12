@@ -71,26 +71,32 @@ describe("", function() {
         img9= document.createElement('IMG');
         input= document.querySelector('input');
         
-        img1.dataset.categoria ='animales';
-        img2.dataset.categoria ='comida';
-        img3.dataset.categoria ='paisajes';
-        img4.dataset.categoria ='animales';
-        img5.dataset.categoria ='animales';
-        img6.dataset.categoria ='animales';
-        img7.dataset.categoria ='animales';
-        img8.dataset.categoria ='animales';
-        img9.dataset.categoria ='animales';
+        img1.setAttribute('alt','panda');
+        img2.setAttribute('alt','theo');
+        img3.setAttribute('alt','mumuki');
+        img4.setAttribute('alt','interfaz');
+        img5.setAttribute('alt','pangea');
+        img6.setAttribute('alt','mumu');
+        img7.setAttribute('alt','pandora');
+        img8.setAttribute('alt','interno');
+        img9.setAttribute('alt','thor');
+
       });
       
       it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
 
-        select.value= 'animales';
-        _dispatch_("change", select);
+         input.value= 'pan';
+        _dispatch_("change", input);
 
         document.getElementsByTagName("img")[0].should.have.style("visibility", "visible");
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
+        document.getElementsByTagName("img")[3].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[4].should.have.style("visibility", "visible");
+        document.getElementsByTagName("img")[5].should.have.style("visibility", "hidden");
+        document.getElementsByTagName("img")[6].should.have.style("visibility", "visible");
+        document.getElementsByTagName("img")[7].should.have.style("visibility", "hidden");
+        document.getElementsByTagName("img")[8].should.have.style("visibility", "hidden");
       });
       
     });
