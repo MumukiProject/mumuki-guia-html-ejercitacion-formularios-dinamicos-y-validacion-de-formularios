@@ -1,4 +1,33 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
+        let img1= document.createElement('IMG');
+        let img2= document.createElement('IMG');
+        let img3= document.createElement('IMG');
+        let img4= document.createElement('IMG');
+        let select= document.getElementsByTagName('select')[0];
+        
+        img1.setAttribute('alt',animales);
+        img2.setAttribute('alt',comida);
+        img3.setAttribute('alt',paisajes);
+        img4.setAttribute('alt',animales);
+
+        _dispatch_("change", select);
+
+        document.getElementsByTagName("img")[0].should.have.style("visibility", "visible");
+        document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
+        document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
+        document.getElementsByTagName("img")[4].should.have.style("visibility", "visible";
+      });
+      
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
