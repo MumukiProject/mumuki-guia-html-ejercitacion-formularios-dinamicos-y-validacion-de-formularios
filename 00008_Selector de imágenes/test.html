@@ -26,10 +26,10 @@
         select.value= 'animales';
         _dispatch_("change", select);
 
-        document.getElementsByTagName("img")[0].should.have.style("visibility", "visible");
+        document.getElementsByTagName("img")[0].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[4].should.have.style("visibility", "visible");
+        document.getElementsByTagName("img")[4].should.have.style("visibility", "hidden");
       });
       
     });
