@@ -88,7 +88,7 @@ describe("", function() {
          input.value= 'pan';
         _dispatch_("change", input);
 
-        document.getElementsByTagName("img")[0].should.have.style("visibility", "visible");
+        img1.should.have.style("visibility", "visible");
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[3].should.have.style("visibility", "hidden");
