@@ -32,7 +32,7 @@
       it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
 
         input.value= 'pan';
-        _dispatch_("change", input);.
+        _dispatch_("change", input);
 
         document.getElementsByTagName("img")[0].should.have.style("visibility", "visible");
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
