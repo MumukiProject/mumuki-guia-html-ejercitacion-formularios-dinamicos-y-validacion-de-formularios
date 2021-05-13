@@ -45,7 +45,23 @@
         img9.setAttribute('alt','thor');
       });
       
-      it("Se deberán cargar 9 imágenes", () => {
+      it("El HTML debería tener un span", () => {
+        document.querySelector('span').should.exist;
+      });
+      
+      it("El span no debería tener texto inicialmente", () => {
+        document.querySelector('span').textContent.should.eql('');
+      });
+      
+      it("El HTML debería tener un input", () => {
+        document.querySelector('input').should.exist('');
+      });
+      
+      it("El input no debería tener nada inicialmente", () => {
+        document.querySelector('input').value.should.eql('');
+      });
+      
+      it("El HTML debería tener 9 imágenes", () => {
         _resetDocument_();
 
         document.querySelectorAll('img').length.should.eql(9);
@@ -96,21 +112,21 @@
         img9.should.be.visible;
       });
       
-      it("Si tengo dos imagenes que contengan 'mumu' en su 'alt' y filtro con 'mumu', el span debe decir '2 resultados encontrados'", () => {
+      it("Si tengo dos imagenes que contengan 'mumu' en su 'alt' y filtro con 'mumu', el span debería decir '2 resultados encontrados'", () => {
         input.value = 'mumu';
         _dispatch_("change", input);
 
         document.querySelector('span').textContent.should.eql('2 resultados encontrados');
       });
       
-      it("Si tengo una imagen que contengan 'theo' en su 'alt' y filtro con 'theo', el span debe decir '1 resultados encontrados'", () => {
+      it("Si tengo una imagen que contengan 'theo' en su 'alt' y filtro con 'theo', el span debería decir '1 resultados encontrados'", () => {
         input.value = 'theo';
         _dispatch_("change", input);
 
         document.querySelector('span').textContent.should.eql('1 resultados encontrados');
       });
       
-      it("Si no filtramos con ningún texto, el span debe decir '9 resultados encontrados'", () => {
+      it("Si no filtramos con ningún texto, el span debería decir '9 resultados encontrados'", () => {
         _resetDocument_();
         input = document.querySelector("input");
         input.value = '';
