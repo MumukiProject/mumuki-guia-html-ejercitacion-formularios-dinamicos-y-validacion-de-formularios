@@ -15,6 +15,7 @@
       
       it("Si no filtramos con ningún texto, el span debe decir '9 resultados encontrados'", () => {
         _resetDocument_();
+        input = document.querySelector("input");
         input.value = '';
         _dispatch_("change", input);
 
