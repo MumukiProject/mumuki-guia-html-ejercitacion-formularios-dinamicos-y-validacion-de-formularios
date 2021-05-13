@@ -103,6 +103,13 @@
 
         document.querySelector('span').textContent.should.eql('1 resultados encontrados');
       });
+      
+      it("Si no filtramos con ningún texto, el span debe decir '9 resultados encontrados'", () => {
+        input.value = '';
+        _dispatch_("change", input);
+
+        document.querySelector('span').textContent.should.eql('9 resultados encontrados');
+      });
     });
   });  
 });/*#tests>*/
