@@ -34,32 +34,17 @@
         document.body.appendChild(img7);
         document.body.appendChild(img8);
         document.body.appendChild(img9);
-        img1.setAttribute('alt','panda');
-        img2.setAttribute('alt','theo');
-        img3.setAttribute('alt','mumuki');
-        img4.setAttribute('alt','interfaz');
-        img5.setAttribute('alt','pangea');
-        img6.setAttribute('alt','mumu');
-        img7.setAttribute('alt','pandora');
-        img8.setAttribute('alt','interno');
-        img9.setAttribute('alt','thor');
+        img1.setAttribute('data-categoria','animales');
+        img2.setAttribute('data-categoria','animales');
+        img3.setAttribute('data-categoria','animales');
+        img4.setAttribute('data-categoria','animales');
+        img5.setAttribute('data-categoria','comida');
+        img6.setAttribute('data-categoria','comida');
+        img7.setAttribute('data-categoria','comida');
+        img8.setAttribute('data-categoria','paisajes');
+        img9.setAttribute('data-categoria','paisajes');
       });
       
-      it("El HTML debería tener un span", () => {
-        document.querySelector('span').should.exist;
-      });
-      
-      it("El span no debería tener texto inicialmente", () => {
-        document.querySelector('span').textContent.should.eql('');
-      });
-      
-      it("El HTML debería tener un input", () => {
-        document.querySelector('input').should.exist;
-      });
-      
-      it("El input no debería tener nada inicialmente", () => {
-        document.querySelector('input').value.should.eql('');
-      });
       
       it("El HTML debería tener 9 imágenes", () => {
         _resetDocument_();
