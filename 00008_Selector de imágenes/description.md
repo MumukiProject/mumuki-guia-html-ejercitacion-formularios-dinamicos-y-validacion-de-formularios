@@ -1,4 +1,4 @@
-Queremos crear una página que nos permita filtrar imagenes de acuerdo a su categoría, se espera que la misma:
+Queremos crear una página que nos permita filtrar imagenes de acuerdo a su categoría :grin:, se espera que la misma:
 
 - tenga un `select` con categorías de imágenes (por ejemplo, animales, comida, paisajes, etc) y un contenedor con al menos 9 imágenes correspondientes a las distintas categorías, mostradas como grilla;
 - el `select` tenga la opción `Todas` y comience con dicha opción seleccionada:
