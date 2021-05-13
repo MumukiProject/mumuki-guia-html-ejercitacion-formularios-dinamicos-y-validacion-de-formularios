@@ -13,10 +13,18 @@
       let img9;
       let input;
       
+      it("Si no filtramos con ningún texto, el span debe decir '9 resultados encontrados'", () => {
+        _resetDocument_();
+        input.value = '';
+        _dispatch_("change", input);
+
+        document.querySelector('span').textContent.should.eql('9 resultados encontrados');
+      });
+      
       beforeEach(() => {
         _resetDocument_();
         input = document.querySelector("input");
-        /*img1 = document.createElement('img');
+        img1 = document.createElement('img');
         img2 = document.createElement('img');
         img3 = document.createElement('img');
         img4 = document.createElement('img');
@@ -42,7 +50,7 @@
         img6.setAttribute('alt','mumu');
         img7.setAttribute('alt','pandora');
         img8.setAttribute('alt','interno');
-        img9.setAttribute('alt','thor');*/
+        img9.setAttribute('alt','thor');
       });
       
       it("Se deberán cargar 9 imágenes", () => {
@@ -108,14 +116,6 @@
         _dispatch_("change", input);
 
         document.querySelector('span').textContent.should.eql('1 resultados encontrados');
-      });
-      
-      it("Si no filtramos con ningún texto, el span debe decir '9 resultados encontrados'", () => {
-        //_resetDocument_();
-        input.value = '';
-        _dispatch_("change", input);
-
-        document.querySelector('span').textContent.should.eql('9 resultados encontrados');
       });
     });
   });  
