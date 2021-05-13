@@ -67,6 +67,21 @@
         img9.should.not.be.visible;
       });
       
+      it("Si seleccionamos comida y tenemos tres imágenes con la categoría comida se muestran solo las tres imágenes", () => {
+        input.value = 'comida';
+        _dispatch_("change", input);
+
+        img1.should.not.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.not.be.visible;
+        img9.should.not.be.visible;
+      });
+      
       
       it("Si no seleccionamos ninguna opción se muestran las 9 imágenes", () => {
         _resetDocument_();
