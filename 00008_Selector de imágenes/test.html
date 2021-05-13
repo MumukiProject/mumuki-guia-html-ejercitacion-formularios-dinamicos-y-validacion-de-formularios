@@ -49,10 +49,6 @@
         document.querySelector('select').should.exist;
       });
       
-      it("El select comienza con la opción todas", () => {
-        document.querySelector('select').selected.should.eq('selected');
-      })
-      
       it("El HTML debería tener 9 imágenes", () => {
         _resetDocument_();
 
@@ -89,6 +85,21 @@
         img7.should.not.be.visible;
         img8.should.not.be.visible;
         img9.should.not.be.visible;
+      });
+      
+        it("Si seleccionamos todas, se muestran todas las imágenes", () => {
+        select.value = 'todas';
+        _dispatch_("change", select);
+
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
       });
       
      /* it("Si tenemos tres imágenes que con la categoría comida y seleccionamos comida se muestran solo las tres imágenes", () => {
