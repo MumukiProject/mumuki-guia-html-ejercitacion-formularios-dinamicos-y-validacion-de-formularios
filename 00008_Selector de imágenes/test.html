@@ -35,14 +35,14 @@
         document.body.appendChild(img8);
         document.body.appendChild(img9);
         img1.setAttribute('data-categoria','animales');
-       /* img2.setAttribute('alt','theo');
-        img3.setAttribute('alt','mumuki');
-        img4.setAttribute('alt','interfaz');
-        img5.setAttribute('alt','pangea');
-        img6.setAttribute('alt','mumu');
-        img7.setAttribute('alt','pandora');
-        img8.setAttribute('alt','interno');
-        img9.setAttribute('alt','thor');*/
+        img2.setAttribute('data-categoria','animales');
+        img3.setAttribute('data-categoria','animales');
+        img4.setAttribute('data-categoria','animales');
+        img5.setAttribute('data-categoria','paisajes');
+        img6.setAttribute('data-categoria','paisajes');
+        img7.setAttribute('data-categoria','comida');
+        img8.setAttribute('data-categoria','comida');
+        img9.setAttribute('data-categoria','comida');
       });
       
       it("El HTML debería tener un select", () => {
@@ -53,6 +53,21 @@
         _resetDocument_();
 
         document.querySelectorAll('img').length.should.eql(9);
+      });
+      
+      it("Si tengo cuatro imágenes que con la categoría animales y seleccionamos animales se muestran solo las cuatro imágenes", () => {
+        select.value = 'animales';
+        _dispatch_("change", input);
+
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.not.be.visible;
+        img6.should.not.be.visible;
+        img7.should.not.be.visible;
+        img8.should.not.be.visible;
+        img9.should.not.be.visible;
       });
     });
   });  
