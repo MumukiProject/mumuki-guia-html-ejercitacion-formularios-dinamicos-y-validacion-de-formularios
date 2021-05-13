@@ -11,9 +11,11 @@
       let img7;
       let img8;
       let img9;
+      let input;
       
       beforeEach(() => {
         _resetDocument_();
+        input = document.querySelector("input");
         img1 = document.createElement('img');
         img2 = document.createElement('img');
         img3 = document.createElement('img');
@@ -44,8 +46,23 @@
       });
       
       it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'pan', solo esas tres deberían ser visibles", () => {
-        let input = document.querySelector("input");
         input.value = 'pan';
+        _dispatch_("change", input);
+
+        img1.should.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.be.visible;
+        img6.should.not.be.visible;
+        img7.should.be.visible;
+        img8.should.not.be.visible;
+        img9.should.not.be.visible;
+        //document.querySelector('p').textContent.should.eql('1  resultados encontrados');
+      });
+      
+      it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'PaN', solo esas tres deberían ser visibles", () => {
+        input.value = 'PaN';
         _dispatch_("change", input);
 
         img1.should.be.visible;
