@@ -32,7 +32,7 @@ Una vez que obtengamos las respuestas mostraremos con una alerta el nivel de sat
 
 Por lo que el resultado deberá corresponder a la siguiente tabla para el puntaje total:
 
-- **4:** Muy instisfactorio
+- **4:** Muy insatisfactorio
 - **5-6:** Insatisfactorio
 - **6-8:** Regular
 - **8-10:** Satisfactorio
