@@ -34,8 +34,8 @@
         document.body.appendChild(img1);
         document.body.appendChild(img2);
         
-        img1.setAttribute('alt','panda');
-        img2.setAttribute('alt','theo');
+        img1.alt = 'panda';
+        img2.alt = 'theo';
         //img2.style.visibility= 'hidden';
         
         let filtro = document.getElementById("filtro");
@@ -45,9 +45,8 @@
         img1.should.be.visible;
         img2.should.be.visible;
         document.getElementsByTagName("img").should.have.length(11);
-        /*document.getElementById('panda').should.have.style('color','rgb(255, 0, 0)');
-        
-        document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
+
+        /*document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[3].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[4].should.have.style("visibility", "visible");
