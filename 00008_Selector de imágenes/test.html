@@ -45,20 +45,8 @@
         img9.setAttribute('alt','thor');
       });
       
-      it("El HTML debería tener un span", () => {
-        document.querySelector('span').should.exist;
-      });
-      
-      it("El span no debería tener texto inicialmente", () => {
-        document.querySelector('span').textContent.should.eql('');
-      });
-      
-      it("El HTML debería tener un input", () => {
-        document.querySelector('input').should.exist;
-      });
-      
-      it("El input no debería tener nada inicialmente", () => {
-        document.querySelector('input').value.should.eql('');
+      it("El HTML debería tener un select", () => {
+        document.querySelector('select').should.exist;
       });
       
       it("El HTML debería tener 9 imágenes", () => {
