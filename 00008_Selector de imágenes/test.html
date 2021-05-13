@@ -71,7 +71,7 @@
       });
       
       it("Si tengo tres imágenes que con la categoría comida y seleccionamos comida se muestran solo las tres imágenes", () => {
-        select.value = 'animales';
+        select.value = 'comida';
         _dispatch_("change", select);
 
         img1.should.not.be.visible;
