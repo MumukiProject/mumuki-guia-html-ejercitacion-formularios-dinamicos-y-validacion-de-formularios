@@ -82,6 +82,21 @@
         img9.should.not.be.visible;
       });
       
+      it("Si seleccionamos paisajes y tenemos dos imágenes con la categoría paisajes se muestran solo las dos imágenes", () => {
+        input.value = 'paisajes';
+        _dispatch_("change", input);
+
+        img1.should.not.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.not.be.visible;
+        img6.should.not.be.visible;
+        img7.should.not.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });
+      
       
       it("Si no seleccionamos ninguna opción se muestran las 9 imágenes", () => {
         _resetDocument_();
