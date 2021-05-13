@@ -58,7 +58,6 @@
         img7.should.be.visible;
         img8.should.not.be.visible;
         img9.should.not.be.visible;
-        //document.querySelector('p').textContent.should.eql('1  resultados encontrados');
       });
       
       it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'PaN', solo esas tres deberían ser visibles", () => {
@@ -74,7 +73,28 @@
         img7.should.be.visible;
         img8.should.not.be.visible;
         img9.should.not.be.visible;
-        //document.querySelector('p').textContent.should.eql('1  resultados encontrados');
+      });
+      
+      it("Si tengo una sola imagen que contengan 'tho' en su 'alt' y filtro con 'tho', solo esa debería ser visible", () => {
+        input.value = 'tho';
+        _dispatch_("change", input);
+
+        img1.should.not.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.not.be.visible;
+        img6.should.not.be.visible;
+        img7.should.not.be.visible;
+        img8.should.not.be.visible;
+        img9.should.be.visible;
+      });
+      
+      it("Si tengo dos imagenes que contengan 'mumu' en su 'alt' y filtro con 'mumu', el span debe decir '2  resultados encontrados'", () => {
+        input.value = 'mumu';
+        _dispatch_("change", input);
+
+        document.querySelector('span').textContent.should.eql('2  resultados encontrados');
       });
     });
   });  
