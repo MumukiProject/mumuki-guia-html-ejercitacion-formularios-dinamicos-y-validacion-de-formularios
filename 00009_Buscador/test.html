@@ -111,6 +111,12 @@
 
         document.querySelector('span').textContent.should.eql('9 resultados encontrados');
       });
+      
+      it("Se deberán cargar 9 imágenes", () => {
+        _resetDocument_();
+
+        document.querySelectorAll('img').length.should.eql(9);
+      });
     });
   });  
 });/*#tests>*/
