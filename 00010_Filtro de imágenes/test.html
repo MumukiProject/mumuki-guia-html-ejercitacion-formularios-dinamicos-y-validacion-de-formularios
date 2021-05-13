@@ -52,7 +52,7 @@
         document.querySelectorAll('img').length.should.eql(9);
       });
       
-      it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'pan', solo esas tres deberían ser visibles", () => {
+      it("Si seleccionamos animales y tenemos cuatro imágenes con la categoría animales se muestran solo las cuatro imágenes", () => {
         input.value = 'animales';
         _dispatch_("change", input);
 
