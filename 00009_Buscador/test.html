@@ -45,6 +45,12 @@
         img9.setAttribute('alt','thor');
       });
       
+      it("Se deberán cargar 9 imágenes", () => {
+        _resetDocument_();
+
+        document.querySelectorAll('img').length.should.eql(9);
+      });
+      
       it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'pan', solo esas tres deberían ser visibles", () => {
         input.value = 'pan';
         _dispatch_("change", input);
@@ -105,17 +111,11 @@
       });
       
       it("Si no filtramos con ningún texto, el span debe decir '9 resultados encontrados'", () => {
-        _resetDocument_();
+        //_resetDocument_();
         input.value = '';
         _dispatch_("change", input);
 
         document.querySelector('span').textContent.should.eql('9 resultados encontrados');
-      });
-      
-      it("Se deberán cargar 9 imágenes", () => {
-        _resetDocument_();
-
-        document.querySelectorAll('img').length.should.eql(9);
       });
     });
   });  
