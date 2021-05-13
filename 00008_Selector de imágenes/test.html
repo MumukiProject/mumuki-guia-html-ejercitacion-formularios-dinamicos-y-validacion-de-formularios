@@ -71,6 +71,7 @@
       });
       
       it("Si tengo tres imágenes que con la categoría comida y seleccionamos comida se muestran solo las tres imágenes", () => {
+        _resetDocument_();
         select.value = 'comida';
         _dispatch_("change", select);
 
@@ -81,8 +82,8 @@
         img5.should.not.be.visible;
         img6.should.not.be.visible;
         img7.should.be.visible;
-        /*img8.should.be.visible;
-        img9.should.be.visible;*/
+        img8.should.be.visible;
+        img9.should.be.visible;
       });
     });
   });  
