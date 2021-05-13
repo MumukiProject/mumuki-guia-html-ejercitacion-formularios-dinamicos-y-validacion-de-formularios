@@ -57,7 +57,7 @@
       
       it("Si tengo cuatro imágenes que con la categoría animales y seleccionamos animales se muestran solo las cuatro imágenes", () => {
         select.value = 'animales';
-        _dispatch_("change", input);
+        _dispatch_("change", select);
 
         img1.should.be.visible;
         img2.should.be.visible;
