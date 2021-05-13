@@ -90,11 +90,18 @@
         img9.should.be.visible;
       });
       
-      it("Si tengo dos imagenes que contengan 'mumu' en su 'alt' y filtro con 'mumu', el span debe decir '2  resultados encontrados'", () => {
+      it("Si tengo dos imagenes que contengan 'mumu' en su 'alt' y filtro con 'mumu', el span debe decir '2 resultados encontrados'", () => {
         input.value = 'mumu';
         _dispatch_("change", input);
 
         document.querySelector('span').textContent.should.eql('2 resultados encontrados');
+      });
+      
+      it("Si tengo una imagen que contengan 'theo' en su 'alt' y filtro con 'theo', el span debe decir '1 resultados encontrados'", () => {
+        input.value = 'theo';
+        _dispatch_("change", input);
+
+        document.querySelector('span').textContent.should.eql('1 resultados encontrados');
       });
     });
   });  
