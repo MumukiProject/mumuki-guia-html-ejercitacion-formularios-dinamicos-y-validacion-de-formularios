@@ -16,8 +16,6 @@
         input= document.querySelector('input');
         
         img1.setAttribute('alt','panda');
-        img1.setAttribute('id', 'panda');
-        img1.setAttribute('color','rgb(255, 0, 0)');
         img2.setAttribute('alt','theo');
         img3.setAttribute('alt','mumuki');
         img4.setAttribute('alt','interfaz');
@@ -46,9 +44,8 @@
         img1.should.be.visible;
         img2.should.be.visible;
         document.getElementsByTagName("img").should.have.length(11);
-        //img1.sarasa.should.eql(8);
-        //document.getElementById('panda').should.have.style('color','rgb(255, 0, 0)');
-        /*
+        /*document.getElementById('panda').should.have.style('color','rgb(255, 0, 0)');
+        
         document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
         document.getElementsByTagName("img")[3].should.have.style("visibility", "hidden");
