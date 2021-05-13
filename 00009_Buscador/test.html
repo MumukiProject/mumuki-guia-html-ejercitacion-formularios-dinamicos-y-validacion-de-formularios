@@ -33,8 +33,8 @@
         let img2 = document.createElement('img');
         img1.setAttribute('alt','panda');
         img2.setAttribute('alt','theo');
-        document.body.insertBefore(img1, firstDiv);
-        document.body.insertBefore(img2, firstDiv);
+        document.body.appendChild(img1);
+        document.body.appendChild(img2);
         //img2.style.visibility= 'hidden';
         
         let filtro = document.getElementById("filtro");
