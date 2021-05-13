@@ -1,7 +1,7 @@
 /*<output#*//*#output>*/
 /*<tests#*/describe("", function() {
   context("", () => {
-    describe("", () => {    
+    describe("", () => {
       let img1;
       let img2;
       let img3;
@@ -11,11 +11,11 @@
       let img7;
       let img8;
       let img9;
-      let select;
+      let input;
       
       beforeEach(() => {
         _resetDocument_();
-        select = document.querySelector("select");
+        input = document.querySelector("input");
         img1 = document.createElement('img');
         img2 = document.createElement('img');
         img3 = document.createElement('img');
@@ -34,24 +34,31 @@
         document.body.appendChild(img7);
         document.body.appendChild(img8);
         document.body.appendChild(img9);
-        img1.dataset.categoria ='comida';
-        img2.dataset.categoria ='comida';
-        img3.dataset.categoria ='comida';
-        img4.dataset.categoria ='paisajes';
-        img5.dataset.categoria ='paisajes';
-        img6.dataset.categoria ='animales';
-        img7.dataset.categoria ='animales';
-        img8.dataset.categoria ='animales';
-        img9.dataset.categoria ='animales';
+        img1.setAttribute('alt','panda');
+        img2.setAttribute('alt','theo');
+        img3.setAttribute('alt','mumuki');
+        img4.setAttribute('alt','interfaz');
+        img5.setAttribute('alt','pangea');
+        img6.setAttribute('alt','mumu');
+        img7.setAttribute('alt','pandora');
+        img8.setAttribute('alt','interno');
+        img9.setAttribute('alt','thor');
       });
       
-      
-      it("El select comienza con todas inicialmente", () => {
-        document.querySelector('select').value.eql('todas');
+      it("El HTML debería tener un span", () => {
+        document.querySelector('span').should.exist;
       });
       
-      it("El HTML debería tener un select", () => {
-        document.querySelector('select').should.exist;
+      it("El span no debería tener texto inicialmente", () => {
+        document.querySelector('span').textContent.should.eql('');
+      });
+      
+      it("El HTML debería tener un input", () => {
+        document.querySelector('input').should.exist;
+      });
+      
+      it("El input no debería tener nada inicialmente", () => {
+        document.querySelector('input').value.should.eql('');
       });
       
       it("El HTML debería tener 9 imágenes", () => {
@@ -60,37 +67,72 @@
         document.querySelectorAll('img').length.should.eql(9);
       });
       
-      it("Si seleccionamos la categoría animales y tenemos 4 imagenes con la categoría animales solo esas cuatro deberían ser visibles", () => {
-        select.value = 'animales';
-        _dispatch_("change", select);
+      it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'pan', solo esas tres deberían ser visibles", () => {
+        input.value = 'pan';
+        _dispatch_("change", input);
+
+        img1.should.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.be.visible;
+        img6.should.not.be.visible;
+        img7.should.be.visible;
+        img8.should.not.be.visible;
+        img9.should.not.be.visible;
+      });
+      
+      it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'PaN', solo esas tres deberían ser visibles", () => {
+        input.value = 'PaN';
+        _dispatch_("change", input);
+
+        img1.should.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.be.visible;
+        img6.should.not.be.visible;
+        img7.should.be.visible;
+        img8.should.not.be.visible;
+        img9.should.not.be.visible;
+      });
+      
+      it("Si tengo una sola imagen que contengan 'tho' en su 'alt' y filtro con 'tho', solo esa debería ser visible", () => {
+        input.value = 'tho';
+        _dispatch_("change", input);
 
         img1.should.not.be.visible;
         img2.should.not.be.visible;
         img3.should.not.be.visible;
         img4.should.not.be.visible;
         img5.should.not.be.visible;
-        img6.should.be.visible;
-        img7.should.be.visible;
-        img8.should.be.visible;
+        img6.should.not.be.visible;
+        img7.should.not.be.visible;
+        img8.should.not.be.visible;
         img9.should.be.visible;
       });
       
-      
-      it("Si selecccionamos 'todas' se muestran todas las imáges", () => {
-        _resetDocument_();
-        select = document.querySelector("select");
-        select.value = 'todas';
-        _dispatch_("change", select);
+      it("Si tengo dos imagenes que contengan 'mumu' en su 'alt' y filtro con 'mumu', el span debería decir '2 resultados encontrados'", () => {
+        input.value = 'mumu';
+        _dispatch_("change", input);
 
-        img1.should.be.visible;
-        img2.should.be.visible;
-        img3.should.be.visible;
-        img4.should.be.visible;
-        img5.should.be.visible;
-        img6.should.be.visible;
-        img7.should.be.visible;
-        img8.should.be.visible;
-        img9.should.be.visible;
+        document.querySelector('span').textContent.should.eql('2 resultados encontrados');
+      });
+      
+      it("Si tengo una imagen que contengan 'theo' en su 'alt' y filtro con 'theo', el span debería decir '1 resultados encontrados'", () => {
+        input.value = 'theo';
+        _dispatch_("change", input);
+
+        document.querySelector('span').textContent.should.eql('1 resultados encontrados');
+      });
+      
+      it("Si no filtramos con ningún texto, el span debería decir '9 resultados encontrados'", () => {
+        _resetDocument_();
+        input = document.querySelector("input");
+        input.value = '';
+        _dispatch_("change", input);
+
+        document.querySelector('span').textContent.should.eql('9 resultados encontrados');
       });
     });
   });  
