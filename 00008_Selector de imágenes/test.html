@@ -6,42 +6,92 @@
       let img2;
       let img3;
       let img4;
+      let img5;
+      let img6;
+      let img7;
+      let img8;
+      let img9;
       let select;
+      
       beforeEach(() => {
         _resetDocument_();
-        img1= document.createElement('IMG');
-        img2= document.createElement('IMG');
-        img3= document.createElement('IMG');
-        img4= document.createElement('IMG');
-        img5= document.createElement('IMG');
-        img6= document.createElement('IMG');
-        img7= document.createElement('IMG');
-        img8= document.createElement('IMG');
-        img9= document.createElement('IMG');
-        select= document.getElementsByTagName('select')[0];
-        
-        img1.dataset.categoria ='animales';
+        select = document.querySelector("select");
+        img1 = document.createElement('img');
+        img2 = document.createElement('img');
+        img3 = document.createElement('img');
+        img4 = document.createElement('img');
+        img5 = document.createElement('img');
+        img6 = document.createElement('img');
+        img7 = document.createElement('img');
+        img8 = document.createElement('img');
+        img9 = document.createElement('img');
+        document.body.appendChild(img1);
+        document.body.appendChild(img2);
+        document.body.appendChild(img3);
+        document.body.appendChild(img4);
+        document.body.appendChild(img5);
+        document.body.appendChild(img6);
+        document.body.appendChild(img7);
+        document.body.appendChild(img8);
+        document.body.appendChild(img9);
+        img1.dataset.categoria ='comida';
         img2.dataset.categoria ='comida';
-        img3.dataset.categoria ='paisajes';
-        img4.dataset.categoria ='animales';
-        img5.dataset.categoria ='animales';
+        img3.dataset.categoria ='comida';
+        img4.dataset.categoria ='paisajes';
+        img5.dataset.categoria ='paisajes';
         img6.dataset.categoria ='animales';
         img7.dataset.categoria ='animales';
         img8.dataset.categoria ='animales';
         img9.dataset.categoria ='animales';
       });
       
-      it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
-
-        select.value= 'animales';
-        _dispatch_("change", select);
-
-        document.getElementsByTagName("img")[0].should.have.style("visibility", "visible");
-        document.getElementsByTagName("img")[1].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[2].should.have.style("visibility", "hidden");
-        document.getElementsByTagName("img")[4].should.have.style("visibility", "visible");
+      
+      it("El select comienza con todas inicialmente", () => {
+        document.querySelector('select').value.eql('todas');
       });
       
+      it("El HTML debería tener un select", () => {
+        document.querySelector('select').should.exist;
+      });
+      
+      it("El HTML debería tener 9 imágenes", () => {
+        _resetDocument_();
+
+        document.querySelectorAll('img').length.should.eql(9);
+      });
+      
+      it("Si seleccionamos la categoría animales y tenemos 4 imagenes con la categoría animales solo esas cuatro deberían ser visibles", () => {
+        select.value = 'animales';
+        _dispatch_("change", select);
+
+        img1.should.not.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.not.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });
+      
+      
+      it("Si selecccionamos 'todas' se muestran todas las imáges", () => {
+        _resetDocument_();
+        select = document.querySelector("select");
+        select.value = 'todas';
+        _dispatch_("change", select);
+
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });
     });
   });  
 });/*#tests>*/
