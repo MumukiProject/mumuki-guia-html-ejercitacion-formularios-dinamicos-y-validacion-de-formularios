@@ -21,9 +21,7 @@
         _dispatch_("change", input);
 
         img1.should.be.visible;
-        img2.should.be.visible;
-        document.getElementsByTagName("img").should.have.length(11);
-        window.sarasa.should.eql(9);
+        img2.should.be.hidden;
         //document.querySelector('p').textContent.should.eql('1  resultados encontrados');
       });
     });
