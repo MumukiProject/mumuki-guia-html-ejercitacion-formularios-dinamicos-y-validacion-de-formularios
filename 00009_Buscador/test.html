@@ -2,26 +2,61 @@
 /*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
+      let img1;
+      let img2;
+      let img3;
+      let img4;
+      let img5;
+      let img6;
+      let img7;
+      let img8;
+      let img9;
+      
       beforeEach(() => {
         _resetDocument_();
-      });
-      
-      it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
         let img1 = document.createElement('img');
         let img2 = document.createElement('img');
-
+        let img3 = document.createElement('img');
+        let img4 = document.createElement('img');
+        let img5 = document.createElement('img');
+        let img6 = document.createElement('img');
+        let img7 = document.createElement('img');
+        let img8 = document.createElement('img');
+        let img9 = document.createElement('img');
         document.body.appendChild(img1);
         document.body.appendChild(img2);
-        
-        img1.alt = 'panda';
-        img2.alt = 'theo';
-
-        let input = document.getElementById("filtro");
+        document.body.appendChild(img3);
+        document.body.appendChild(img4);
+        document.body.appendChild(img5);
+        document.body.appendChild(img6);
+        document.body.appendChild(img7);
+        document.body.appendChild(img8);
+        document.body.appendChild(img9);
+        img1.setAttribute('alt','panda');
+        img2.setAttribute('alt','theo');
+        img3.setAttribute('alt','mumuki');
+        img4.setAttribute('alt','interfaz');
+        img5.setAttribute('alt','pangea');
+        img6.setAttribute('alt','mumu');
+        img7.setAttribute('alt','pandora');
+        img8.setAttribute('alt','interno');
+        img9.setAttribute('alt','thor');
+      });
+      
+      it("Si tengo tres imágenes que contengan 'pan' en su 'alt' y filtro con 'pan', solo esas tres deberían ser visibles", () => {
+        let input = document.querySelector("input");
         input.value = 'pan';
         _dispatch_("change", input);
 
         img1.should.be.visible;
         img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.be.visible;
+        img6.should.not.be.visible;
+        img7.should.be.visible;
+        img8.should.not.be.visible;
+        img9.should.not.be.visible;
         //document.querySelector('p').textContent.should.eql('1  resultados encontrados');
       });
     });
