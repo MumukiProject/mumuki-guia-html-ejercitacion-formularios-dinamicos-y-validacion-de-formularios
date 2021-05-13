@@ -23,7 +23,8 @@
         img1.should.be.visible;
         img2.should.be.visible;
         document.getElementsByTagName("img").should.have.length(11);
-        document.querySelector('p').textContent.should.eql('1  resultados encontrados');
+        window.sarasa.should.eql(9);
+        //document.querySelector('p').textContent.should.eql('1  resultados encontrados');
       });
     });
   });  
