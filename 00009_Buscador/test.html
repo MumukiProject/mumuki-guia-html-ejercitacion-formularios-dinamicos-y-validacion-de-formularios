@@ -30,12 +30,12 @@
       });
       
       it("Si tengo dos imágenes con la categoría animales, al seleccionar animales se muestran esas dos imágenes", () => {
-        let primeraImagen = document.getElementsByTagName('img')[0];
+        let firstDiv = document.getElementsById('first');
         let img1 = document.createElement('img');
         let img2 = document.createElement('img');
         img1.setAttribute('alt','panda');
         img2.setAttribute('alt','theo');
-        document.body.insertBefore(img1, primeraImagen);
+        document.body.insertBefore(img1, firstDiv);
         //document.body.insertBefore(img2, primeraImagen);
         //img2.style.visibility= 'hidden';
         
