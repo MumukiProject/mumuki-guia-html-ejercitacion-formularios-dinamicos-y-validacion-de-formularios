@@ -85,6 +85,21 @@
         img9.should.not.be.visible;
       });
       
+        it("Si tengo dos imágenes que con la categoría paisajes y seleccionamos paisajes se muestran solo las dos imágenes", () => {
+        select.value = 'paisajes';
+        _dispatch_("change", select);
+
+        img1.should.not.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.not.be.visible;
+        img8.should.not.be.visible;
+        img9.should.not.be.visible;
+      });
+      
 
     });
   });  
