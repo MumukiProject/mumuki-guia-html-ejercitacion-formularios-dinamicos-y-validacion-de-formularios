@@ -1,5 +1,5 @@
 ---
 expectations:
 - !ruby/hash:ActiveSupport::HashWithIndifferentAccess
-  binding: "*"
-  inspection: DeclaresFunction:calcularPuntaje()
+  binding: 'js:'
+  inspection: Declares:calcularPuntaje
