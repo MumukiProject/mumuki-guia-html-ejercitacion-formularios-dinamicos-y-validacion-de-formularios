@@ -21,9 +21,11 @@
         input2.value = '1';
         input3.value = '1';
         input4.value = '1';
-        _dispatch_("click",  button);
-        _resetDocument_();
-        'Muy insatisfactorio'.should.eql(_shiftAlertMessage_())
+        let resultado = calcularPuntaje()
+        assert.equal(resultado, 4,`{resultado}`);
+})
+        
+        
       });
       
     });
