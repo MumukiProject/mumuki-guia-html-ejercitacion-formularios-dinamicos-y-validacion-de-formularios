@@ -22,7 +22,7 @@
         input4.value = 1;
         _dispatch_('click', button);
         
-        document.querySelectorAll("p")[1].should.have.trimmed.text("Muy insatisfactorio");
+        document.querySelectorAll("p")[4].should.have.trimmed.text("Muy insatisfactorio");
         _shiftAlertMessage_().should.eql(4);
 })
       
