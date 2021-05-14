@@ -12,12 +12,14 @@
         let input3 = document.querySelector("input[name=asesoramiento]");
         let input4 = document.querySelector("input[name=recomendacion]");
         let button = document.querySelector('button');
-        input1.value = '1';
-        input2.value = '1';
-        input3.value = '1';
-        input4.value = '1';
+        input1.value = 1;
+        input2.value = 1;
+        input3.value = 1;
+        input4.value = 1;
         _dispatch_('click', button);
-        document.querySelector("input[name=solucion]").value.should.eql('1');
+        let resultado = calcularPuntaje
+        resultado.should.eql(4);
+        //document.querySelector("input[name=solucion]").value.should.eql('1');
 })
       
     });
