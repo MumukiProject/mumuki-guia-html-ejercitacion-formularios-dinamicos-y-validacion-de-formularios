@@ -17,7 +17,7 @@
         input3.value = '1';
         input4.value = '1';
         _dispatch_('click', button);
-        assert.equal(input1.value, 4);
+        document.querySelector("input[name=solucion]").should.eql(1);
 })
       
     });
