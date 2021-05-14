@@ -1,10 +1,7 @@
 /*<output#*//*#output>*/
-/*<tests#*/describe("", function() {
-  context("", () => {
-    describe("", () => {
-      beforeEach(() => {
-        _resetDocument_();
-      });
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
       
       it("Si seleccionamos todas las opciones de valor 1 debería mostrar 'Muy insatisfactorio'", function() {
         let input1 = document.querySelector("input[name=solucion]");
@@ -20,10 +17,6 @@
         
         //document.querySelector("input[name=solucion]").value.should.eql('1');
         _shiftAlertMessage_().should.eql(4);
-})
-      
-    });
-  });  
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
