@@ -6,21 +6,23 @@
       let input2;
       let input3;
       let input4;
+      let button;
       beforeEach(() => {
         _resetDocument_();
         input1 = document.querySelector("input[name=solucion]");
         input2 = document.querySelector("input[name=recibir]");
         input3 = document.querySelector("input[name=asesoramiento]");
         input4 = document.querySelector("input[name=recomendacion]");
+        button = document.querySelector('button');
       });
       
       it("Si seleccionamos todas las opciones de valor 1 debería mostrar 'Muy insatisfactorio'", () => {
         input1.value = '1';
-        input2.value = '2';
-        input3.value = '3';
-        input4.value = '4';
-        _dispatch_("change",  kilometros);
-        document.getElementById("millas").value.should.eql("0.62");
+        input2.value = '1';
+        input3.value = '1';
+        input4.value = '1';
+        _dispatch_("click",  button);
+        'Muy '.should.eql(_shiftAlertMessage_())
       });
       
     });
