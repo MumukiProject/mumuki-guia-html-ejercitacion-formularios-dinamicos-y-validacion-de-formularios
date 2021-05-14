@@ -22,7 +22,8 @@
         input3.value = '1';
         input4.value = '1';
         _dispatch_("click",  button);
-        'Muy '.should.eql(_shiftAlertMessage_())
+        _resetDocument_();
+        'Muy insatisfactorio'.should.eql(_shiftAlertMessage_())
       });
       
     });
