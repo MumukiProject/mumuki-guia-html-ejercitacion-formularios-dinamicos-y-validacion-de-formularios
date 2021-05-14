@@ -2,21 +2,16 @@
 /*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
-      let input1;
-      let input2;
-      let input3;
-      let input4;
-      let button;
       beforeEach(() => {
-        //_resetDocument_();
-        input1 = document.querySelector("input[name=solucion]");
-        input2 = document.querySelector("input[name=recibir]");
-        input3 = document.querySelector("input[name=asesoramiento]");
-        input4 = document.querySelector("input[name=recomendacion]");
-        button = document.querySelector('button');
+        _resetDocument_();
       });
       
       it("Si seleccionamos todas las opciones de valor 1 debería mostrar 'Muy insatisfactorio'", function() {
+        let input1 = document.querySelector("input[name=solucion]");
+        let input2 = document.querySelector("input[name=recibir]");
+        let input3 = document.querySelector("input[name=asesoramiento]");
+        let input4 = document.querySelector("input[name=recomendacion]");
+        let button = document.querySelector('button');
         input1.value = '1';
         input2.value = '1';
         input3.value = '1';
