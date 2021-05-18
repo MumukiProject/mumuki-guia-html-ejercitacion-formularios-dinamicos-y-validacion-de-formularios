@@ -16,15 +16,15 @@
         let input3 = document.querySelector("input[name=asesoramiento]");
         let input4 = document.querySelector("input[name=recomendacion]");
         let button = document.getElementById('boton');
-        input1.value = 1;
-        input2.value = 1;
-        input3.value = 1;
-        input4.value = 1;
+        input1[0].checked = true;
+        input2[0].checked = true;
+        input3[0].checked = true;
+        input4[0].checked = true;
         _dispatch_('click', button);
         
         document.querySelectorAll("p")[4].should.have.trimmed.text("Muy insatisfactorio");
         _shiftAlertMessage_().should.eql(4);
-})
+      })
       
     });
   });  
