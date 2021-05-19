@@ -16,6 +16,6 @@ Continuemos trabajando sobre el formulario de pago que realizamos anteriormente 
 
 En el Paso 1: Usaremos `blur` y `change`
 
-Mientras que las validaciones del Paso 2 y Paso 3 las haremos al clickear el botón Enviar.
+Mientras que las validaciones del Paso 2 y Paso 3 las haremos al clickear el botón Pagar.
 
 > Creá el código HTML y JavaScript que acabamos de describir.
