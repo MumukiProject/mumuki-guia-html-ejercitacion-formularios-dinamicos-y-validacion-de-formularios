@@ -3,13 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="index.js"></script>
-  </head>
+  <script src="index.js"></script>
+  </head>   
   <body>
-    
-  </body>
-</html>
-/*#index.html>*/
+    <form>
+      <p><b> ¿Qué tan rápido solucionamos tu problema? </b></p>
+      <input type="radio" class= "solucion"name="solucion" value= 1>Demoraron mucho
+      <input type="radio" class="solucion" name="solucion" value= 2>Lo recibí en el tiempo estimado
+      <input type="radio" class="solucion" name="solucion" value= 3>Super rápido
+      <p> <b> ¿Como recibiste el producto? </b> </p>   
+      <input type="radio" class="recibir" name="recibir" value= 1>Tuvo un desperfecto
+      <input type="radio" class="recibir" name="recibir" value= 2>Era tal cual la publicación  
+      <input type="radio" class="recibir" name="recibir" value= 3>Superó mis expectativas   
+      <p> <b> ¿Cómo calificarías el asesoramiento de nuestros representantes? </b> </p>
+      <input type="radio" class="asesoramiento" name="asesoramiento" value= 1>No supo responder adecuadamente mis preguntas
+      <input type="radio" class="asesoramiento" name="asesoramiento" value= 2>El representante respondió adecuadamente
+      <input type="radio" class="asesoramiento" name="asesoramiento" value= 3>Recibí un excelente asesoramiento
+      <p><b>¿Recomendarías nuestro portal a otro usuario?</b></p>   
+      <input type="radio" class="recomendacion" name="recomendacion" value= 1>No lo creo
+      <input type="radio" class="recomendacion" name="recomendacion" value= 2>Solo para casos puntuales
+      <input type="radio" class="recomendacion" name="recomendacion" value= 3>¡Si, por supuesto!<br>
+      <button id="boton" type="button" name="button">Enviar encuesta</button>
+    </form>
+                  
+  </body>      
+</html>                
+  /*#index.html>*/
 /*<index.js#*///Definí acá tus funciones auxiliares.
 
 document.addEventListener("DOMContentLoaded", () => { 
