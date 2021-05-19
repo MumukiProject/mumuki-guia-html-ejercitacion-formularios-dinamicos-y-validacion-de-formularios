@@ -16,11 +16,18 @@
         let input3 = document.querySelectorAll("input[name=asesoramiento]");
         let input4 = document.querySelectorAll("input[name=recomendacion]");
         let button = document.querySelector('button');
-        _resetDocument_();
-        input1.value = 1;
-        input2.value = 1;
-        input3.value = 1;
-        input4.value = 1;
+        input1[0].checked = true;
+        input1[1].checked = false;
+        input1[2].checked = false;
+        input2[0].checked = true;
+        input2[1].checked = false;
+        input2[2].checked = false;
+        input3[0].checked = true;
+        input3[1].checked = false;
+        input3[2].checked = false;
+        input4[0].checked = true;
+        input4[1].checked = false;
+        input4[2].checked = false;
         _dispatch_('click', button);
         'Muy insatisfactorio'.should.eql(_shiftAlertMessage_())
       })
