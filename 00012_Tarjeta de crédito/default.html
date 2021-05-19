@@ -1,14 +1,29 @@
 /*<index.html#*/<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
-  </head>
+    <title></title>
+  </head>    
   <body>
-    
-  </body>
-</html>/*#index.html>*/
+    <form>
+  <label for= "tarjeta"> Número de tarjeta de crédito: </label>
+  <input type= "number" name= "tarjeta" id= "tarjeta" />
+  <label for= "titular"> Nombre completo del titular: </label>
+  <input type= "text" name= "titular" id= "titular" />
+  <label for= "mes"> Mes: </label>
+  <input type= "text" name= "mes" id= "mes" />
+  <label for= "añoDeVencimiento"> Año de vencimiento: </label>
+  <input type= "number" name= "añoDeVencimiento" id= "añoDeVencimiento" min= 2021 max= 2031><br>
+  <label for= "ccv"> CCV: </label>
+  <input type= "password" name= "ccv" id= "ccv" />
+  <button> Pagar </button>
+     
+</form>          
+  </body>                        
+</html>    
+/*#index.html>*/
 /*<index.js#*///Definí acá tus funciones auxiliares.
 
 document.addEventListener("DOMContentLoaded", () => { 
