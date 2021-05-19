@@ -33,7 +33,7 @@
         'Muy insatisfactorio'.should.eql(_shiftAlertMessage_())
       })
       
-        it("Si seleccionamos todas las opciones de valor 2 debería mostrar 'Regular'", function() {
+        it("Si seleccionamos todas las opciones de valor 2 debería mostrar 'Satisfactorio'", function() {
         let input1 = document.querySelectorAll("input[name=solucion]");
         let input2 = document.querySelectorAll("input[name=recibir]");
         let input3 = document.querySelectorAll("input[name=asesoramiento]");
@@ -53,7 +53,7 @@
         input4[1].checked = true;
         input4[2].checked = false;
         _dispatch_('click', button);
-        'Regular'.should.eql(_shiftAlertMessage_())
+        'Satisfactorio'.should.eql(_shiftAlertMessage_())
       })
       
         it("Si seleccionamos todas las opciones de valor 3 debería mostrar 'Muy satisfactorio'", function() {
@@ -76,7 +76,7 @@
         input4[1].checked = false;
         input4[2].checked = true;
         _dispatch_('click', button);
-        'Regular'.should.eql(_shiftAlertMessage_())
+        'Muy satisfactorio'.should.eql(_shiftAlertMessage_())
       })
       
     });
