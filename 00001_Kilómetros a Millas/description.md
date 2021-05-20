@@ -5,7 +5,7 @@ Necesitamos crear una página que nos ayude a convertir los valores de kilómetr
 
 :warning: Consideraciones:
 
-- eanto kilómetros como millas deben tener un `id` con su nombre, por ejemplo para kilómetros el `id` deberá ser _kilometros_;
-- tené en cuenta que un kilómetro es 0.62 millas, y una milla es 1.61 kilómetros.
+- Tanto kilómetros como millas deben tener un `id` con su nombre, por ejemplo para kilómetros el `id` deberá ser _kilómetros_;
+- Tené en cuenta que un kilómetro es 0.62 millas, y una milla es 1.61 kilómetros.
 
 > Creá el código HTML y JavaScript que acabamos de describir.

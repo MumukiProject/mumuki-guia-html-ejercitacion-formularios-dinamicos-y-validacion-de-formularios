@@ -27,7 +27,7 @@
         let green = document.getElementsByTagName("input")[1];
         let blue = document.getElementsByTagName("input")[2];
         red.value = 44;
-        green.value = 08;
+        green.value = 8;
         blue.value = 0;
         _dispatch_("change",  red);
         _dispatch_("change",  green);
@@ -35,7 +35,7 @@
         
         backgroundColor = document.body.style.backgroundColor;
         
-        backgroundColor.replace(/\s/g, '').should.eql("rgb(44,08,0)");
+        backgroundColor.replace(/\s/g, '').should.eql("rgb(44,8,0)");
       });
 
     });
