@@ -37,22 +37,7 @@
         
         backgroundColor.replace(/\s/g, '').should.eql("rgb(44,88,0)");
       });
-      
-      it("Si ingresamos 44, 88, 0 el color del body es rgb(44, 88, 0)", () => {
-        let red = document.getElementsByTagName("input")[0];
-        let green = document.getElementsByTagName("input")[1];
-        let blue = document.getElementsByTagName("input")[2];
-        red.value = 44;
-        green.value = 88;
-        blue.value = 0;
-        _dispatch_("change",  red);
-        _dispatch_("change",  green);
-        _dispatch_("change",  blue);
-        
-        backgroundColor = document.body.style.backgroundColor;
-        
-        backgroundColor.replace(/\s/g, '').should.eql("rgb(44,88,0)");
-      });
+
       
       it("Si ingresamos 250, 100, 0 el color del body es rgb(250, 100, 0)", () => {
         let red = document.getElementsByTagName("input")[0];
