@@ -1,0 +1,1 @@
+Para la conversión podés utilizar la fórmula: `VALOR_INGRESADO * VALOR_UNIDAD / VALOR_UNIDAD_A_CONVERTIR`.

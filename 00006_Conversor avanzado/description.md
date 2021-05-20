@@ -16,8 +16,7 @@ Necesitamos crear una página que nos ayude a convertir valores de distancia :st
 - al seleccionar una nueva opción en cualquiera de los `select` o al modificar el valor del input, se actualice el texto con el resultado de la conversión del valor ingresado de una unidad a la otra;
 - al clickear el botón `Intercambiar` se intercambien las opciones de los `select`s y se actualice el texto.
 
-
-**TIP**
+:warning: Consideraciones:
 
 Para realizar este ejercicio, el `value` de cada option del `select` deben ser los siguientes:
 
@@ -26,8 +25,5 @@ Para realizar este ejercicio, el `value` de cada option del `select` deben ser l
 - para `Decímetros`, el value debe ser `0.1`;
 - para `Centímetros`, el value debe ser `0.01`;
 - para `Milímetros`, el value debe ser `0.001`.
-
-
-La conversión se realiza con la fórmula: `VALOR_INGRESADO * VALOR_UNIDAD / VALOR_UNIDAD_A_CONVERTIR`.
 
 > Creá el código HTML y JavaScript que acabamos de describir.
