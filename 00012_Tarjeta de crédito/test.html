@@ -24,7 +24,7 @@
         _resetDocument_();
         let inputNombre = document.getElementById("titular");
         let button = document.querySelector('button');
-        inputNombre.value = 4321;
+        inputNombre.value = '4321';
         _dispatch_("click", button);
         'El nombre debe contener solo letras'.should.eql(_shiftAlertMessage_())
       });
