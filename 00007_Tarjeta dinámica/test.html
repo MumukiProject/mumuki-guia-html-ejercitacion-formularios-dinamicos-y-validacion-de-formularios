@@ -19,6 +19,14 @@
         document.querySelector("textarea").should.exist;
       });
       
+            
+      it("Si en el título escribimos 'La biografía de Ada Lovelace', en la card se visualiza ese título", () => {
+        let inputTitulo = document.querySelectorAll('input')[1];
+        inputTitulo.value = 'La biografía de Ada Lovelace';
+        _dispatch_("change",  inputTitulo);
+        document.querySelector('h1').should.have.trimmed.text('La biografía de Ada Lovelace');
+      });
+      
       
     });
   });  
