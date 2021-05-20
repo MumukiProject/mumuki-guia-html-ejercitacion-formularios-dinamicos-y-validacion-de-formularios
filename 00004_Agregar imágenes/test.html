@@ -11,7 +11,7 @@
 
         _dispatch_("click", button);
 
-        document.getElementsByTagName("img").should.have.length(1);
+        document.getElementsByTagName("input")[0].should.have.trimmed.text(" ");
       });
       
       it("Al ingresar dos imágenes el contenedor tiene dos imágenes", () => {
@@ -47,6 +47,10 @@
 
         document.getElementsByTagName("img").should.have.length(1);
       });
+      
+      it("El botón dice Agregar imagen", () => {
+        document.querySelector("button").should.have.trimmed.text("Agregar imagen");
+      })
     });
   });  
 });/*#tests>*/
