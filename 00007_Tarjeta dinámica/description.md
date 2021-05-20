@@ -6,4 +6,7 @@ Queremos crear una página que contenga una tarjeta dinámica :star_struck:, se 
 - si el `checkbox` no está seleccionado, el link `Ver más` no se muestre y el `input` de la url externa se deshabilite;
 - si el `checkbox` está seleccionado, el link `Ver más` se muestre y el `input` de la url externa se habilite.
 
+:warning: Consideraciones:
+La card debe tener una clase `card`.
+
 > Creá el código HTML y JavaScript que acabamos de describir.
