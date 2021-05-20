@@ -23,7 +23,7 @@
       it("Si enviamos un número de tarjeta de menos de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres.", () => {
         let inputTarjeta = document.getElementById("numeroTarjeta");
         inputTarjeta.value = 4321;
-        _dispatch_("change",  inputTatjeta);
+        _dispatch_("change",  inputTarjeta);
         'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
       })
       
