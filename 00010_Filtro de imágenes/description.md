@@ -5,6 +5,7 @@ Ahora queremos filtrar las imágenes a través de un radio-button :sunglasses:, 
 - al deseleccionar todos los checkbox se muestren todas las imágenes.
 
 :warning: Consideraciones:
+
 Agregá a cada imagen un atributo `data-categoria` cuyo valor se corresponda con el atributo `value` del `input` de la categoría correspondiente.
 
 > Creá el código HTML y JavaScript que acabamos de describir.
