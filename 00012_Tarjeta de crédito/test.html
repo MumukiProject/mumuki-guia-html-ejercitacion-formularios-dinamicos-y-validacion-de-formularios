@@ -26,6 +26,13 @@
         _dispatch_("change",  inputTatjeta);
         'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
       })
+      
+      it("Si enviamos un número de tarjeta de menos de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres.", () => {
+        let inputTatjeta = document.getElementById("numeroTarjeta");
+        inputTatjeta.value = 4321;
+        _dispatch_("change",  inputTatjeta);
+        'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
+      })
     });
   });  
 });/*#tests>*/
