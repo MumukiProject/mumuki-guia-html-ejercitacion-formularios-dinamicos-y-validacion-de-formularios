@@ -5,6 +5,8 @@ Queremos crear una página que nos permita filtrar imagenes de acuerdo a su cate
 - al seleccionar una nueva opción en el `select` se oculten aquellas imágenes que no pertecen a la categoría seleccionada y se muestren las que sí;
 - al seleccionar `Todas` se muestren todas las imágenes.
 
-**TIP:** Agregá a cada imagen un atributo `data-categoria` cuyo valor se corresponda con el atributo `value` del `option` de la categoría correspondiente.
+:warning: Consideraciones:
+
+Agregá a cada imagen un atributo `data-categoria` cuyo valor se corresponda con el atributo `value` del `option` de la categoría correspondiente.
 
 > Creá el código HTML y css que acabamos de describir.
