@@ -45,7 +45,7 @@
         let check = document.querySelectorAll('input')[3];
         check.checked = true;
         _dispatch_("click",  check);
-        document.querySelectorAll('input')[2].disabled.should.eq('true');
+        document.querySelectorAll('input')[2].disabled.should.eq('false');
       });
     });
   });  
