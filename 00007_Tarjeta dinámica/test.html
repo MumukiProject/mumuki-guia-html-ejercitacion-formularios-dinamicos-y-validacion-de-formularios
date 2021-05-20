@@ -41,7 +41,7 @@
         document.querySelector('a').should.have.style('visibility', 'hidden')
       });
       
-      it("Si el ckeckbox está seleccionado el input de la url externa se desabilita", () => {
+      it("Si el ckeckbox está seleccionado el input de la url externa se habilita", () => {
         let check = document.querySelectorAll('input')[3];
         check.checked = true;
         _dispatch_("click",  check);
