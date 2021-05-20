@@ -39,6 +39,14 @@
         _dispatch_("change",  texto);
         document.getElementsByTagName('span')[0].should.have.trimmed.text('-206/240 caracteres');
       });
+      
+      it("Si ingresamos un comentario de 35 caracteres el borde del textarea se colorea de verde ", () => {
+        let texto = document.getElementsByTagName("textarea")[0];
+        texto.value = 'Esta es una cadena de 35 caracteres';
+        _dispatch_("change",  texto);
+        document.getElementsByTagName('textarea')[0].should.have.style("border-color", "green");
+      });
+      
     });
   });  
 });/*#tests>*/
