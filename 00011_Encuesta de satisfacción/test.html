@@ -79,15 +79,15 @@
         'Muy satisfactorio'.should.eql(_shiftAlertMessage_())
       })
       
-        it("Si las selecciones dan un puntaje de 6 debería mostrar 'Regular'", function() {
+        it("Si las selecciones dan un puntaje de 7 debería mostrar 'Regular'", function() {
         let input1 = document.querySelectorAll("input[name=velocidad]");
         let input2 = document.querySelectorAll("input[name=recepcion]");
         let input3 = document.querySelectorAll("input[name=asesoramiento]");
         let input4 = document.querySelectorAll("input[name=recomendacion]");
         let button = document.querySelector('button');
          _resetDocument_();
-        input1[0].checked = true;
-        input1[1].checked = false;
+        input1[0].checked = false;
+        input1[1].checked = true;
         input1[2].checked = false;
         input2[0].checked = false;
         input2[1].checked = true;

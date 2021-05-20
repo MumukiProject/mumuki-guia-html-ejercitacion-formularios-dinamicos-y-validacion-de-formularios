@@ -8,7 +8,7 @@ El grado de satisfacción deberá corresponder a la siguiente tabla en base al p
 
 - **4:** Muy insatisfactorio.
 - **5-6:** Insatisfactorio.
-- **6-8:** Regular.
+- **7-8:** Regular.
 - **8-10:** Satisfactorio.
 - **11-12:** Muy satisfactorio.
 
