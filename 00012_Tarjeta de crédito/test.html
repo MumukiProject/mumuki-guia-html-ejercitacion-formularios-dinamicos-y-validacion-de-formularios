@@ -12,6 +12,13 @@
         _dispatch_("change",  inputTatjeta);
         document.getElementById('numeroTarjeta').should.have.style("border-color", "red");
       });
+      
+      it("Si enviamos un número de tarjeta de menos de 16 caracteres se borra el contenido del input", () => {
+        let inputTatjeta = document.getElementById("numeroTarjeta");
+        inputTatjeta.value = 4321;
+        _dispatch_("change",  inputTatjeta);
+        document.getElementById('numeroTarjeta').should.have.trimmed.text("");
+      });
     });
   });  
 });/*#tests>*/
