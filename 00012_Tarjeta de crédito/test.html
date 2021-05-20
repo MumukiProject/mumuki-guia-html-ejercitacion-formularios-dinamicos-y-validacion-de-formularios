@@ -20,13 +20,6 @@
         document.getElementById('numeroTarjeta').should.have.trimmed.text("");
       });
       
-      it("Si enviamos un número de tarjeta de menos de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres.", () => {
-        let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 4321;
-        _dispatch_("change",  inputTarjeta);
-        'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
-      });
-      
       it("Si ingresamos números en el input del nombre del títular se envía un alert con el mensaje El nombre debe contener solo letras.", () => {
         _resetDocument_();
         let inputNombre = document.getElementById("titular");
@@ -35,6 +28,15 @@
         _dispatch_("click", button);
         'El nombre debe contener solo letras'.should.eql(_shiftAlertMessage_())
       });
+      
+      it("Si enviamos un número de tarjeta de menos de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres.", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 4321;
+        _dispatch_("change",  inputTarjeta);
+        'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
+      });
+      
+
     });
   });  
 });/*#tests>*/
