@@ -15,7 +15,7 @@
         document.getElementsByTagName('span')[0].should.have.trimmed.text("Comentario enviado");
       });
       
-      it("Si ingresamos un comentario de 35 caracteres el textarea muestra 205/240 caracteres", () => {
+      it("Si ingresamos un comentario de 35 caracteres el span muestra 205/240 caracteres", () => {
         let texto = document.getElementsByTagName("textarea")[0];
         let boton = document.getElementsByTagName('button')[0];
         texto.value = 'Esta es una cadena de 35 caracteres';
