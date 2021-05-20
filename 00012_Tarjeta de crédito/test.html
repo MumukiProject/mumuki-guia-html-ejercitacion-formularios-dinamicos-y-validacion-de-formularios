@@ -27,11 +27,11 @@
         'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
       })
       
-      it("Si enviamos un número de tarjeta de menos de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres.", () => {
-        let inputTatjeta = document.getElementById("numeroTarjeta");
-        inputTatjeta.value = 4321;
+      it("Si ingresamos números en el input del nombre del títular se envía un alert con el mensaje El nombre debe contener solo letras.", () => {
+        let inputNombre = document.getElementById("titular");
+        inputNombre.value = 4321;
         _dispatch_("change",  inputTatjeta);
-        'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
+        'El nombre debe contener solo letras'.should.eql(_shiftAlertMessage_())
       })
     });
   });  
