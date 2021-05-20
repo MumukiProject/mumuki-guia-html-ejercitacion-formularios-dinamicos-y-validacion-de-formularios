@@ -25,7 +25,7 @@
         inputTarjeta.value = 4321;
         _dispatch_("change",  inputTarjeta);
         'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
-      })
+      });
       
       it("Si ingresamos números en el input del nombre del títular se envía un alert con el mensaje El nombre debe contener solo letras.", () => {
         let inputNombre = document.getElementById("titular");
@@ -33,7 +33,7 @@
         inputNombre.value = 4321;
         _dispatch_("click", button);
         'El nombre debe contener solo letras'.should.eql(_shiftAlertMessage_())
-      })
+      });
     });
   });  
 });/*#tests>*/
