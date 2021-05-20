@@ -79,7 +79,7 @@
         'Muy satisfactorio'.should.eql(_shiftAlertMessage_())
       })
       
-        it("Si las selecciones dan un puntaje de 6 sebería mostrar 'Regular", function() {
+        it("Si las selecciones dan un puntaje de 6 debería mostrar 'Regular'", function() {
         let input1 = document.querySelectorAll("input[name=velocidad]");
         let input2 = document.querySelectorAll("input[name=recepcion]");
         let input3 = document.querySelectorAll("input[name=asesoramiento]");
@@ -102,7 +102,7 @@
         'Regular'.should.eql(_shiftAlertMessage_())
       })
       
-      it("Si seleccionamos 1 1 2 1", function() {
+      it("Si las selecciones dan un puntaje de 5 debería mostrar 'Insatisfactorio'", function() {
         let input1 = document.querySelectorAll("input[name=velocidad]");
         let input2 = document.querySelectorAll("input[name=recepcion]");
         let input3 = document.querySelectorAll("input[name=asesoramiento]");
