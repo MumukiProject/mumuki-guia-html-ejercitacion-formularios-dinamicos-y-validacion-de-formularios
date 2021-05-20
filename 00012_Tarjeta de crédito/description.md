@@ -2,12 +2,12 @@ Continuemos trabajando sobre el formulario de pago que realizamos anteriormente 
 
 **Paso 1: Campo del número de la tarjeta de crédito.**
 
-- El campo debe tener 16 caracteres. Al salirse del foco de este input, y en el caso de no cumplir con este requerimiento, el borde del input debe colorearse de rojo, le mostraremos un mensaje de error que la tarjeta debe contener 16 caracteres y borraremos el contenido el input.
+- El campo debe tener 16 caracteres. Al salirse del foco de este input, y en el caso de no cumplir con este requerimiento, el borde del input debe colorearse de rojo, borraremos el contenido el input y mostraremos el siguiente mensaje de error mediante un `alert`:  _La tarjeta debe contener 16 caracteres._ 
 - Adicionaremos un input de tipo selector con 2 opciones. Visa y Mastercard. Esto no debe estar disponible para la edición del usuario, pero aplicaremos un cambio dada la siguiente condición: Si el número ingresado por el usuario inicia con 5. Será Mastercard, si comienza con 3 o 4 será visa. Y si inicia con otro valor mostraremos un mensaje de error indicando el número ingresado es erróneo.
 
 **Paso 2: Campo nombre.**
 
-- Validar que el campo de nombre posea solo texto. Lo validaremos con una regex.
+- Validar que el campo de nombre posea solo texto. Lo validaremos con una regex, en el caso de no cumplir con este requerimiento mostraremos el siguiente mensaje de error mediante un `alert`: _El nombre debe contener solo letras._
 
 **Paso 3: CCV.**
 
