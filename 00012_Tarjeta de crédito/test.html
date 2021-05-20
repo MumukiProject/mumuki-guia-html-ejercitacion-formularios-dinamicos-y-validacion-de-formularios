@@ -1,4 +1,19 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Si enviamos un número de tarjeta de más de 16 caracteres el borde del input se colorea de rojo", () => {
+        let inputTatjeta = document.getElementById("tarjeta");
+        inputTatjeta.value = 43214321432143214321;
+        _dispatch_("change",  inputTatjeta);
+        document.getElementById('tarjeta').should.have.style("border-color", "red");
+      });
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
