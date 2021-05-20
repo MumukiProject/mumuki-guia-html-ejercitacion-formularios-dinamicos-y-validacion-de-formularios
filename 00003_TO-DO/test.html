@@ -6,6 +6,14 @@
         _resetDocument_();
       });
       
+      it("Hay un botón", () => {
+        document.querySelector("button").should.exist;
+      })
+
+      it("El botón dice Crear TO-DO", () => {
+        document.querySelector("button").should.have.trimmed.text("Crear TO-DO");
+      })
+      
       it("Al ingresar una tarea el valor del input se borra", () => {
         let input = document.querySelectorAll("input")[0];
         let boton = document.querySelectorAll("button")[0];
@@ -13,6 +21,7 @@
         _dispatch_("click",  boton);
         document.getElementById("input").value.should.eql('');
       });
+      
       it("Al ingresar dos tareas la lista tiene dos elementos ", () => {
         let input = document.querySelectorAll("input")[0];
         let boton = document.querySelectorAll("button")[0];
