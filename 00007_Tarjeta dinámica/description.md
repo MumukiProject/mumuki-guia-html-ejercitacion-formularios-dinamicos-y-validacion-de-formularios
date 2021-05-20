@@ -1,7 +1,7 @@
 Queremos crear una página que contenga una tarjeta dinámica :star_struck:, se espera que la misma:
 
 - tenga un `input` para la url de la imagen, un `input` para el título, un `textarea` para la descripción, un `input` para la url externo y un `checkbok` que diga `Link externo`;
-- tenga una card simple y estilizada con:
+- una card simple y estilizada con:
   - una imagen;
   - un título h1;
   - un párrafo con una descripción;
