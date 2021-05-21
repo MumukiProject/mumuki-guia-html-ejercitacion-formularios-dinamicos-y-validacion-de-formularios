@@ -76,8 +76,8 @@
         img9.should.not.be.visible;
       });
       
-      it("Si seleccionamos comida y paisajes y tenemos tres imágenes con categoría comidas y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
-        animales.checked = true;
+      it("Si seleccionamos comidas y paisajes y tenemos tres imágenes con categoría comidas y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
+        animales.checked = false;
         comidas.checked = true;
         paisajes.checked = true;
         _dispatch_("click", animales);
