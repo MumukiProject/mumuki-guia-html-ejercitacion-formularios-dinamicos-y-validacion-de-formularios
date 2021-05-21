@@ -7,59 +7,140 @@
         _resetUserInteractions_();
       });
       
+      it("Inicialmente el input para CCV está inhabilitado", () => {
+        document.getElementById('ccv').disabled.should.eql("true");
+      });
+      
+      it("El selector para el tipo de tarjeta está inhabilitado", () => {
+        document.querySelector('select').disabled.should.eql("true");
+      });
+      
       it("Si enviamos un número de tarjeta de más de 16 caracteres el borde del input se colorea de rojo", () => {
-        let inputTatjeta = document.getElementById("numeroTarjeta");
-        inputTatjeta.value = 43214321432143214321;
-        _dispatch_("change",  inputTatjeta);
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 43214321432143214;
+        _dispatch_("change",  inputTarjeta);
         document.getElementById('numeroTarjeta').should.have.style("border-color", "red");
       });
       
-      it("Si enviamos un número de tarjeta de menos de 16 caracteres se borra el contenido del input", () => {
-        let inputTatjeta = document.getElementById("numeroTarjeta");
-        inputTatjeta.value = 4321;
-        _dispatch_("change",  inputTatjeta);
+      it("Si enviamos un número de tarjeta de menos de 16 caracteres el borde del input se colorea de rojo", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 432143214321432;
+        _dispatch_("change",  inputTarjeta);
+        document.getElementById('numeroTarjeta').should.have.style("border-color", "red");
+      });
+      
+      it("Si enviamos un número de tarjeta de más de 16 caracteres se borra el contenido del input", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 43214321432143214;
+        _dispatch_("change",  inputTarjeta);
         document.getElementById('numeroTarjeta').should.have.trimmed.text("");
       });
       
-      it("Si ingresamos números en el input del nombre del títular se envía un alert con el mensaje El nombre debe contener solo letras.", () => {
+      it("Si enviamos un número de tarjeta de menos de 16 caracteres se borra el contenido del input", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 432143214321432;
+        _dispatch_("change",  inputTarjeta);
+        document.getElementById('numeroTarjeta').should.have.trimmed.text("");
+      });
+      
+      it("Si enviamos un número de tarjeta de más de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 43214321432143214;
+        _dispatch_("change",  inputTarjeta);
+        'La tarjeta debe contener 16 caracteres'.should.eql(_shiftAlertMessage_())
+      });
+      
+      it("Si enviamos un número de tarjeta de menos de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 432143214321432;
+        _dispatch_("change",  inputTarjeta);
+        'La tarjeta debe contener 16 caracteres'.should.eql(_shiftAlertMessage_())
+      });
+      
+      it("Si enviamos un número de tarjeta válido se habilita el input para el CCV", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 3321432143214321;
+        _dispatch_("change",  inputTarjeta);
+        document.getElementById('ccv').disabled.should.eql("false");
+      });
+      
+      it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 3 se selecciona visa", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 3321432143214321;
+        _dispatch_("change",  inputTarjeta);
+        document.querySelector('select').value.should.eql('visa')
+      });
+      
+      it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 4 se selecciona visa", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 4321432143214321;
+        _dispatch_("change",  inputTarjeta);
+        document.querySelector('select').value.should.eql('visa')
+      });
+      
+      it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 5 se selecciona mastercard", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 5321432143214321;
+        _dispatch_("change",  inputTarjeta);
+        document.querySelector('select').value.should.eql('mastercard')
+      });
+      
+      it("Si enviamos un número de tarjeta de 16 caracteres que no comienza con 3, 4 o 5 se envía un alert con el mensaje El número ingresado es erróneo", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 5321432143214321;
+        _dispatch_("change",  inputTarjeta);
+        'El número ingresado es erróneo'.should.eql(_shiftAlertMessage_());
+      });
+      
+      it("Si ingresamos números en el input del nombre del títular se envía un alert con el mensaje El nombre debe contener solo letras", () => {
         let inputNombre = document.getElementById("titular");
         let button = document.querySelector('button');
-        inputNombre.value = 4321;
+        inputNombre.value = "Ad4 Lov3lac3";
         _dispatch_("click", button);
         'El nombre debe contener solo letras'.should.eql(_shiftAlertMessage_())
       });
       
-      it("Si enviamos un número de tarjeta de menos de 16 caracteres se envía un alert con el mensaje La tarjeta debe contener 16 caracteres.", () => {
-        let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 4321;
-        _dispatch_("change",  inputTarjeta);
-        'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
-      });
-      
-     it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 3 se selecciona visa.", () => {
-        let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 3321432143214321;
+      it("Si ingresamos solo letras en el input del nombre del títular no se envía ningún alert", () => {
+        let inputNombre = document.getElementById("titular");
         let button = document.querySelector('button');
-        _dispatch_("click",  button);
-        document.querySelector('select').value.should.eql('visa')
+        inputNombre.value = "Ada Lovelace";
+        _dispatch_("click", button);
+        _alertMessagesCount_().should.eql(0);
       });
       
-    it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 4 se selecciona visa.", () => {
+      it("Si el tipo de tarjeta es visa y cargamos un CCV de más de 3 números se envía un alert con el mensaje El CCV no es válido", () => {
+        let button = document.querySelector('button');
         let inputTarjeta = document.getElementById("numeroTarjeta");
         inputTarjeta.value = 4321432143214321;
-        let button = document.querySelector('button');
-        _dispatch_("click",  button);
-        document.querySelector('select').value.should.eql('visa')
+        _dispatch_("change",  inputTarjeta);
+        let ccv = document.getElementById('ccv');
+        ccv.value = 1234;
+        _dispatch_("click", button);
+        'El CCV no es válido'.should.eql(_shiftAlertMessage_());
       });
       
-    it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 5 se selecciona mastercard.", () => {
+      it("Si el tipo de tarjeta es visa y cargamos un CCV de menos de 3 números se envía un alert con el mensaje El CCV no es válido", () => {
+        let button = document.querySelector('button');
         let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 5321432143214321;
-        let button = document.querySelector('button');
-        _dispatch_("click",  button);
-        document.querySelector('select').value.should.eql('mastercard')
+        inputTarjeta.value = 4321432143214321;
+        _dispatch_("change",  inputTarjeta);
+        let ccv = document.getElementById('ccv');
+        ccv.value = 12;
+        _dispatch_("click", button);
+        'El CCV no es válido'.should.eql(_shiftAlertMessage_());
       });
       
+      it("Si el tipo de tarjeta es visa y cargamos un CCV de 3 números no se envía ningún alert", () => {
+        let button = document.querySelector('button');
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 4321432143214321;
+        _dispatch_("change",  inputTarjeta);
+        let ccv = document.getElementById('ccv');
+        ccv.value = 123;
+        _dispatch_("click", button);
+        _alertMessagesCount_().should.eql(0);
+      });
+    
     });
   });  
 });/*#tests>*/
