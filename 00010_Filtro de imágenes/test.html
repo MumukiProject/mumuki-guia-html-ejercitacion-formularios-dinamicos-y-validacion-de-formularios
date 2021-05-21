@@ -11,7 +11,9 @@
       let img7;
       let img8;
       let img9;
-      let input;
+      let animales;
+      let comidas;
+      let paisajes;
       
       beforeEach(() => {
         _resetDocument_();
@@ -115,7 +117,6 @@
       
       it("Si no seleccionamos ningún checkbox se visualizan todas las imágenes", () => {
         _resetDocument_();
-        input = document.querySelector("input");
         animales.checked = false;
         comidas.checked = false;
         paisajes.checked = false;
@@ -136,7 +137,6 @@
       
       it("Si seleccionamos todos los checkbox se muestran las 9 imágenes", () => {
         _resetDocument_();
-        input = document.querySelector("input");
         animales.checked = true;
         comidas.checked = true;
         paisajes.checked = true;
