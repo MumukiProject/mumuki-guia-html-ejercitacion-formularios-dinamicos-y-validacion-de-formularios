@@ -15,9 +15,9 @@
       
       beforeEach(() => {
         _resetDocument_();
-        animales = document.querySelector("input[value='animales']");
-        comidas = document.querySelector("input[value='comidas']");
-        paisajes = document.querySelector("input[value='paisajes']");
+        animales = document.querySelectorAll("input[type='checkbox']")[0];
+        comidas = document.querySelectorAll("input[type='checkbox']")[1];
+        paisajes = document.querySelectorAll("input[type='checkbox']")[2];
         img1 = document.createElement('img');
         img2 = document.createElement('img');
         img3 = document.createElement('img');
