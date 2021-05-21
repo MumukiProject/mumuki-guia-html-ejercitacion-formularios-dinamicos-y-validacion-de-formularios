@@ -35,7 +35,31 @@
         _dispatch_("change",  inputTarjeta);
         'La tarjeta debe contener 16 caracteres.'.should.eql(_shiftAlertMessage_())
       });
-
+      
+     it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 3 se selecciona visa.", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 3321432143214321;
+        let button = document.querySelector('button');
+        _dispatch_("click",  button);
+        document.querySelector('select').value.should.eql('visa')
+      });
+      
+    it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 4 se selecciona visa.", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 4321432143214321;
+        let button = document.querySelector('button');
+        _dispatch_("click",  button);
+        document.querySelector('select').value.should.eql('visa')
+      });
+      
+    it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 5 se selecciona mastercard.", () => {
+        let inputTarjeta = document.getElementById("numeroTarjeta");
+        inputTarjeta.value = 5321432143214321;
+        let button = document.querySelector('button');
+        _dispatch_("click",  button);
+        document.querySelector('select').value.should.eql('mastercard')
+      });
+      
     });
   });  
 });/*#tests>*/
