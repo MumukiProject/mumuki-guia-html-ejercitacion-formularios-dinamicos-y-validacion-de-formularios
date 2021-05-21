@@ -52,7 +52,7 @@
         let check = document.querySelectorAll('input')[3];
         check.checked = true;
         _dispatch_("click",  check);
-        document.querySelector('a').should.be.visible;
+        document.querySelector("div[class='card'] a").should.be.visible;
       });
       
       it("Si el ckeckbox está seleccionado el input de la url externa se habilita", () => {
