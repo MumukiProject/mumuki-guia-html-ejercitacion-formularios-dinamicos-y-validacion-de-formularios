@@ -19,7 +19,30 @@
         document.querySelector("textarea").should.exist;
       });
       
-            
+      it("Hay una card", () => {
+        document.querySelector("div[class='card']").should.exist;
+      });  
+      
+      it("Hay una card", () => {
+        document.querySelector("div[class='card']").should.exist;
+      }); 
+      
+      it("La card contiene una imagen", () => {
+        document.querySelector("div[class='card'] img").should.exist;
+      }); 
+      
+      it("La card contiene un link", () => {
+        document.querySelector("div[class='card'] a").should.exist;
+      }); 
+      
+      it("La card contiene un título", () => {
+        document.querySelector("div[class='card'] h1").should.exist;
+      }); 
+      
+      it("La card contiene un párrafo", () => {
+        document.querySelector("div[class='card'] p").should.exist;
+      }); 
+      
       it("Si en el título escribimos 'La biografía de Ada Lovelace', en la card se visualiza ese título", () => {
         let inputTitulo = document.querySelectorAll('input')[1];
         inputTitulo.value = 'La biografía de Ada Lovelace';
