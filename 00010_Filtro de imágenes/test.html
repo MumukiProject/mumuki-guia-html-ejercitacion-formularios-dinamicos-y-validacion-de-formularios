@@ -15,7 +15,9 @@
       
       beforeEach(() => {
         _resetDocument_();
-        input = document.querySelector("input[name=categorias]:checked");
+        animales = document.querySelectorAll("input[type=checkbox]")[0];
+        comida = document.querySelectorAll("input[type=checkbox]")[1];
+        paisajes = document.querySelectorAll("input[type=checkbox]")[2];
         img1 = document.createElement('img');
         img2 = document.createElement('img');
         img3 = document.createElement('img');
@@ -53,7 +55,10 @@
       });
       
       it("Si seleccionamos animales y tenemos cuatro imágenes con la categoría animales se muestran solo las cuatro imágenes", () => {
-        input.value = 'animales';
+        animales.checked = true;
+        comida.checked = true;
+        paisajes.checked = false;
+        
         _dispatch_("change", input);
 
         img1.should.be.visible;
@@ -67,8 +72,10 @@
         img9.should.not.be.visible;
       });
       
-      it("Si seleccionamos comida y tenemos tres imágenes con la categoría comida se muestran solo las tres imágenes", () => {
-        input.value = 'comida';
+      it("Si seleccionamos comida y paisajes y tenemos tres imágenes con categoría comida y dos con categoría paisajesse muestran solo las cinco imágenes", () => {
+        animales.checked = true;
+        comida.checked = true;
+        paisajes.checked = true;
         _dispatch_("change", input);
 
         img1.should.not.be.visible;
@@ -83,7 +90,9 @@
       });
       
       it("Si seleccionamos paisajes y tenemos dos imágenes con la categoría paisajes se muestran solo las dos imágenes", () => {
-        input.value = 'paisajes';
+        animales.checked = true;
+        comida.checked = false;
+        paisajes.checked = true;
         _dispatch_("change", input);
 
         img1.should.not.be.visible;
@@ -98,10 +107,31 @@
       });
       
       
-      it("Si no seleccionamos ninguna opción se muestran las 9 imágenes", () => {
+      it("Si no seleccionamos ningún checkbox no se muestra ninguna imagen", () => {
         _resetDocument_();
         input = document.querySelector("input");
-        input.value = '';
+        animales.checked = false;
+        comida.checked = false;
+        paisajes.checked = false;
+        _dispatch_("change", input);
+
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });
+      
+      it("Si seleccionamos todos los checkbox se muestran las 9 imágenes", () => {
+        _resetDocument_();
+        input = document.querySelector("input");
+        animales.checked = true;
+        comida.checked = true;
+        paisajes.checked = true;
         _dispatch_("change", input);
 
         img1.should.be.visible;
