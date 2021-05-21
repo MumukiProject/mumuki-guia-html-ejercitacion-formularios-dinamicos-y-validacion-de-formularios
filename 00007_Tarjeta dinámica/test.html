@@ -46,6 +46,13 @@
         document.querySelector("div[class='card'] h1").should.have.trimmed.text('La biografía de Ada Lovelace');
       });
       
+      it("Si completamos el input para la url, en la card se ve la imagen correspondiente a la misma", () => {
+        let inputImagen = document.querySelectorAll('input')[0];
+        inputImagen.value = 'algunaUrl';
+        _dispatch_("change",  inputImagen);
+        document.querySelector("div[class='card'] img").should.have.attr('src', 'algunaUrl');
+      });
+      
       it("Si en el textarea agregamos una descripción, se visualiza en el párrafo de la card", () => {
         let descripcion = document.querySelector('textarea');
         descripcion.value = 'Augusta Ada King, condesa de Lovelace (Londres, 10 de diciembre de 1815-íd., 27 de noviembre de 1852), estuvo registrada al nacer como Augusta Ada Byron y conocida habitualmente como Ada Lovelace, fue una matemática y escritora británica, célebre sobre todo por su trabajo acerca de la calculadora de uso general de Charles Babbage, la denominada máquina analítica. Entre sus notas sobre la máquina, se encuentra lo que se reconoce hoy como el primer algoritmo destinado a ser procesado por una máquina, por lo que se la considera como la primera programadora de ordenadores.';
