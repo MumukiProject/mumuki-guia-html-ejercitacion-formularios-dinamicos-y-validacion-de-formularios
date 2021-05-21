@@ -17,8 +17,8 @@
    
       it("Si queremos convertir 1 metro a centrimetros nos muestra 100", () => {
         input.value = 1;
-        selectorOrigen[1].selected = 'selected';
-        selectorDestino[3].selected = 'selected';
+        selectorOrigen.getElementsByTagName('option')[1].selected = 'selected';
+        selectorDestino.getElementsByTagName('option')[3].selected = 'selected';
         _dispatch_("change",  selectorOrigen);
         _dispatch_("change",  selectorDestino);
         _dispatch_("click",  boton);
