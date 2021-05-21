@@ -11,8 +11,8 @@
         _resetDocument_();
         input = document.getElementsByTagName("input")[0];
         boton = document.getElementsByTagName("button")[0];
-        selectorOrigen = document.getElementById('valorUnidad');
-        selectorDestino = document.getElementById('valorAConvertir');
+        selectorOrigen = document.getElementsByTagName('select')[0];
+        selectorDestino = document.getElementsByTagName('select')[1];
       });
    
       it("Si queremos convertir 1 metro a centrimetros nos muestra 100", () => {
