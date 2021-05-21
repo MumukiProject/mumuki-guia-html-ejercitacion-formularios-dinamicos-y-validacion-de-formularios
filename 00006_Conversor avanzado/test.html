@@ -14,9 +14,9 @@
         aConvertir = document.getElementsByTagName('select')[0];
         convertido = document.getElementsByTagName('select')[1];
       });
-      
+   
       it("Si queremos convertir 1 metro a centrimetros nos muestra 100", () => {
-        input.value = 100;
+        input.value = 1;
         aConvertir.value = 1;
         convertido.value = 0.01;
         _dispatch_("click",  boton);
@@ -24,19 +24,27 @@
       });
       
       it("Si queremos convertir 1 kilómetro a metros nos muestra 1000", () => {
-        input.value = 1000;
-        aConvertir.value = 1;
-        convertido.value = 1000;
+        input.value = 1;
+        aConvertir.value = 1000;
+        convertido.value = 1;
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("1000");
       });
 
-      it("Si queremos convertir 1 milímetro a metros nos muestra 0.001", () => {
-        input.value = 1000;
-        aConvertir.value = 1;
+      it("Si queremos convertir 10 milímetros a metros nos muestra 0.01", () => {
+        input.value = 10;
+        aConvertir.value = 0.001;
+        convertido.value = 1;
+        _dispatch_("click",  boton);
+        document.getElementsByTagName("span")[0].should.have.trimmed.text("0.01");
+      });
+      
+      it("Si queremos convertir 100 decímetros a kilómetros nos muestra 0.01", () => {
+        input.value = 100;
+        aConvertir.value = 0.01;
         convertido.value = 1000;
         _dispatch_("click",  boton);
-        document.getElementsByTagName("span")[0].should.have.trimmed.text("1000");
+        document.getElementsByTagName("span")[0].should.have.trimmed.text("0.01");
       });
     });
   });  
