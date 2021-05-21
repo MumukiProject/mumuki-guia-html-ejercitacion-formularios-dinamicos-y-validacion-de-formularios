@@ -4,7 +4,7 @@ Continuemos trabajando sobre el formulario de pago que realizamos anteriormente 
 
 - el campo debe tener 16 caracteres. Al salirse del foco de este `input`, y en el caso de no cumplir con este requerimiento, el borde del mismo debe colorearse de rojo y debemos borrar su contenido. El error se muestra mediante un `alert` _La tarjeta debe contener 16 caracteres._ 
 - vamos a agregar un `input` de tipo selector con las opciones _Visa_ y _Mastercard_. Esto no debe estar disponible para la edición del usuario, pero el cambio se aplicará dada la siguiente condición:
-  - Si el número ingresado por el usuario inicia con 5. Será Mastercard.
+  - Si el número ingresado por el usuario inicia con 5 será Mastercard.
   - Si comienza con 3 o 4 será visa.
   - Si inicia con otro valor mostraremos un alert con el mensaje _El número ingresado es erróneo_.
 
