@@ -11,16 +11,16 @@
         _resetDocument_();
         input = document.getElementsByTagName("input")[0];
         boton = document.getElementsByTagName("button")[0];
-        unidadOrigen = document.getElementById('valorUnidad');
-        unidadDestino = document.getElementsByTagName('select')[1];
+        selectorOrigen = document.getElementById('valorUnidad');
+        selectorDestino = document.getElementById('valorAConvertir');
       });
    
       it("Si queremos convertir 1 metro a centrimetros nos muestra 100", () => {
         input.value = 1;
-        unidadOrigen.value = 1;
-        unidadDestino.value = 0.01;
-        _dispatch_("change",  unidadOrigen);
-        _dispatch_("change",  unidadDestino);
+        selectorOrigen[1].selected = 'selected';
+        selectorDestino[3].selected = 'selected';
+        _dispatch_("change",  selectorOrigen);
+        _dispatch_("change",  selectorDestino);
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("100");
       });
