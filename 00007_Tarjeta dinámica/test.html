@@ -43,7 +43,7 @@
       
       it("Si el ckeckbox no está seleccionado el input de la url externa se deshabilita", () => {
         let check = document.querySelectorAll('input')[3];
-        check.checked = true;
+        check.checked = false;
         _dispatch_("click",  check);
         document.querySelectorAll('input')[2].disabled.should.eq(true);
       });
