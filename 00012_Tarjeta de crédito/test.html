@@ -110,22 +110,16 @@
       
       it("Si el tipo de tarjeta es visa y cargamos un CCV de más de 3 números se envía un alert con el mensaje El CCV no es válido", () => {
         let button = document.querySelector('button');
-        let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 4321432143214321;
-        _dispatch_("change",  inputTarjeta);
-        let ccv = document.getElementById('ccv');
-        ccv.value = 1234;
+        document.querySelector("select").value = "visa"
+        document.getElementById('ccv').value = 1234;
         _dispatch_("click", button);
         'El CCV no es válido'.should.eql(_shiftAlertMessage_());
       });
       
       it("Si el tipo de tarjeta es visa y cargamos un CCV de menos de 3 números se envía un alert con el mensaje El CCV no es válido", () => {
         let button = document.querySelector('button');
-        let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 4321432143214321;
-        _dispatch_("change",  inputTarjeta);
-        let ccv = document.getElementById('ccv');
-        ccv.value = 12;
+        document.querySelector("select").value = "visa"
+        document.getElementById('ccv').value = 12;
         _dispatch_("click", button);
         'El CCV no es válido'.should.eql(_shiftAlertMessage_());
       });
