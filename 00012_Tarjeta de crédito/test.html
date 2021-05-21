@@ -121,7 +121,8 @@
         document.querySelector("select").value = "visa"
         document.getElementById('ccv').value = 12;
         _dispatch_("click", button);
-        'El CCV no es válido'.should.eql(_shiftAlertMessage_());
+        //'El CCV no es válido'.should.eql(_shiftAlertMessage_());
+        ccv.value.should.eql(8);
       });
       
       it("Si el tipo de tarjeta es visa y cargamos un CCV de 3 números no se envía ningún alert", () => {
