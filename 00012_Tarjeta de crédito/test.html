@@ -87,7 +87,7 @@
       
       it("Si enviamos un número de tarjeta de 16 caracteres que no comienza con 3, 4 o 5 se envía un alert con el mensaje El número ingresado es erróneo", () => {
         let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 5321432143214321;
+        inputTarjeta.value = 1321432143214321;
         _dispatch_("change",  inputTarjeta);
         'El número ingresado es erróneo'.should.eql(_shiftAlertMessage_());
       });
