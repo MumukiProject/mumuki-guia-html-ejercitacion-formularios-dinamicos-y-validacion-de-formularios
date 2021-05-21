@@ -11,41 +11,41 @@
         _resetDocument_();
         input = document.getElementsByTagName("input")[0];
         boton = document.getElementsByTagName("button")[0];
-        selectorOrigen = document.getElementsByTagName('select')[0];
-        selectorDestino = document.getElementsByTagName('select')[1];
+        unidadOrigen = document.getElementsByTagName('select')[0];
+        unidadDestino = document.getElementsByTagName('select')[1];
       });
    
       it("Si queremos convertir 1 metro a centrimetros nos muestra 100", () => {
         input.value = 1;
-        selectorOrigen.value = '1';
-        selectorDestino.value = '0.01';
+        unidadOrigen.value = '1';
+        unidadDestino.value = '0.01';
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("100");
       });
       
-      /*it("Si queremos convertir 1 kilómetro a metros nos muestra 1000", () => {
+      it("Si queremos convertir 1 kilómetro a metros nos muestra 1000", () => {
         input.value = 1;
-        unidadOrigen.value = 1000;
-        unidadDestino.value = 1;
+        unidadOrigen.value = '1000';
+        unidadDestino.value = '1';
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("1000");
       });
 
       it("Si queremos convertir 10 milímetros a metros nos muestra 0.01", () => {
         input.value = 10;
-        unidadOrigen.value = 0.001;
-        unidadDestino.value = 1;
+        unidadOrigen.value = '0.001';
+        unidadDestino.value = '1';
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("0.01");
       });
       
       it("Si queremos convertir 100 decímetros a kilómetros nos muestra 0.01", () => {
         input.value = 100;
-        unidadOrigen.value = 0.01;
-        unidadDestino.value = 3000;
+        unidadOrigen.value = '0.01';
+        unidadDestino.value = '1000';
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("0.01");
-      });*/
+      });
     });
   });  
 });/*#tests>*/
