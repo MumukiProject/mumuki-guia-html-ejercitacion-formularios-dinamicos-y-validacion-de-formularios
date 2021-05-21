@@ -1,0 +1,4 @@
+- name: El link es válido
+  keys:
+    repositorio:
+      match: !ruby/regexp '/https:\/\/github.com\/\w+\/\w+/'

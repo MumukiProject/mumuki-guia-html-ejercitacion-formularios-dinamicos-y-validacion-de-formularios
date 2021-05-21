@@ -1,4 +1,4 @@
-Antes de enviar el [formulario de registro de cliente](mumukiproject/mumuki-guia-html-ejercitacion-formularios/4) creado con anterioridad, realizaremos algunas validaciones sobre este. Pero primero, agregaremos una etiqueta small debajo de cada input con un color rojo y de inicio no va a visualizarse.
+Basándonos en el [formulario de registro de cliente](mumukiproject/mumuki-guia-html-ejercitacion-formularios/4) creado con anterioridad, realizaremos algunas validaciones sobre este. Pero primero, agregaremos una etiqueta small debajo de cada input con un color rojo y de inicio no va a visualizarse.
 
 Los errores y las validaciones a mostrar deben ser las siguientes:
 
@@ -11,17 +11,4 @@ Los errores y las validaciones a mostrar deben ser las siguientes:
 
 En el caso de que alguno de los inputs no cumpla con las características solicitadas, debemos visualizar el error correspondiente a ese input.
 
-Usar las siguientes funciones para validar los datos con expresiones regulares:
-
-```javascript
-function esEmailValido(email) {
-  const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return regex.test(email.toLowerCase())
-}
-
-function esPasswordValida(password) {
-  const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm
-  return regex.test(password)
-}
-```
-> Creá el código HTML y JavaScript que acabamos de describir.
+> Cargá el repositorio con los correspondientes archivos.
