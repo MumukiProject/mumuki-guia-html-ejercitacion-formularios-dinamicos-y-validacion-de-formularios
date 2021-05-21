@@ -137,6 +137,32 @@
         _dispatch_("click", button);
         _alertMessagesCount_().should.eql(0);
       });
+      
+      it("Si el tipo de tarjeta es mastercard y cargamos un CCV de más de 4 números se envía un alert con el mensaje El CCV no es válido", () => {
+      	let button = document.querySelector('button');
+      	document.querySelector("select").value = "mastercard"
+      	document.getElementById('ccv').value = 12345;
+      	_dispatch_("click", button);
+      	'El CCV no es válido'.should.eql(_shiftAlertMessage_());
+      });
+      
+      it("Si el tipo de tarjeta es mastercard y cargamos un CCV de menos de 4 números se envía un alert con el mensaje El CCV no es válido", () => {
+      	let button = document.querySelector('button');
+      	document.querySelector("select").value = "mastercard"
+      	document.getElementById('ccv').value = 123;
+      	_dispatch_("click", button);
+      	'El CCV no es válido'.should.eql(_shiftAlertMessage_());
+      });
+      
+      it("Si el tipo de tarjeta es mastercard y cargamos un CCV de 4 números no se envía ningún alert", () => {
+      	let inputNombre = document.getElementById("titular");
+      	let button = document.querySelector('button');
+      	inputNombre.value = "Ada Lovelace";
+      	document.querySelector("select").value = "mastercard"
+      	document.getElementById('ccv').value = 1234;
+      	_dispatch_("click", button);
+      	_alertMessagesCount_().should.eql(0);
+      });
     });
   });  
 });/*#tests>*/
