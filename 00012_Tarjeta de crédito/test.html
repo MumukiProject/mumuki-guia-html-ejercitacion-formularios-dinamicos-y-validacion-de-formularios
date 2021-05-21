@@ -8,11 +8,11 @@
       });
       
       it("Inicialmente el input para CCV está inhabilitado", () => {
-        document.getElementById('ccv').disabled.should.eql("true");
+        document.getElementById('ccv').disabled.should.eql(true);
       });
       
       it("El selector para el tipo de tarjeta está inhabilitado", () => {
-        document.querySelector('select').disabled.should.eql("true");
+        document.querySelector('select').disabled.should.eql(true);
       });
       
       it("Si enviamos un número de tarjeta de más de 16 caracteres el borde del input se colorea de rojo", () => {
@@ -61,7 +61,7 @@
         let inputTarjeta = document.getElementById("numeroTarjeta");
         inputTarjeta.value = 3321432143214321;
         _dispatch_("change",  inputTarjeta);
-        document.getElementById('ccv').disabled.should.eql("false");
+        document.getElementById('ccv').disabled.should.eql(false);
       });
       
       it("Si enviamos un número de tarjeta de 16 caracteres que comienza con 3 se selecciona visa", () => {
