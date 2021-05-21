@@ -58,7 +58,7 @@
       
       it("Si seleccionamos animales y tenemos cuatro imágenes con la categoría animales se muestran solo las cuatro imágenes", () => {
         animales.checked = true;
-        comidas.checked = true;
+        comidas.checked = false;
         paisajes.checked = false;
         
         _dispatch_("click", animales);
@@ -76,7 +76,7 @@
         img9.should.not.be.visible;
       });
       
-      it("Si seleccionamos comida y paisajes y tenemos tres imágenes con categoría comida y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
+      it("Si seleccionamos comida y paisajes y tenemos tres imágenes con categoría comidas y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
         animales.checked = true;
         comidas.checked = true;
         paisajes.checked = true;
@@ -91,12 +91,12 @@
         img5.should.be.visible;
         img6.should.be.visible;
         img7.should.be.visible;
-        img8.should.not.be.visible;
-        img9.should.not.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
       });
       
       it("Si seleccionamos paisajes y tenemos dos imágenes con la categoría paisajes se muestran solo las dos imágenes", () => {
-        animales.checked = true;
+        animales.checked = false;
         comidas.checked = false;
         paisajes.checked = true;
         _dispatch_("click", animales);
