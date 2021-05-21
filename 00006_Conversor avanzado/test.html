@@ -19,8 +19,6 @@
         input.value = 1;
         selectorOrigen.getElementsByTagName('option')[1].selected = 'selected';
         selectorDestino.getElementsByTagName('option')[3].selected = 'selected';
-        _dispatch_("change",  selectorOrigen);
-        _dispatch_("change",  selectorDestino);
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("100");
       });
