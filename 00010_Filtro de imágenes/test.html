@@ -16,7 +16,7 @@
       beforeEach(() => {
         _resetDocument_();
         animales = document.querySelectorAll("input[type=checkbox]")[0];
-        comida = document.querySelectorAll("input[type=checkbox]")[1];
+        comidas = document.querySelectorAll("input[type=checkbox]")[1];
         paisajes = document.querySelectorAll("input[type=checkbox]")[2];
         img1 = document.createElement('img');
         img2 = document.createElement('img');
@@ -56,7 +56,7 @@
       
       it("Si seleccionamos animales y tenemos cuatro imágenes con la categoría animales se muestran solo las cuatro imágenes", () => {
         animales.checked = true;
-        comida.checked = true;
+        comidas.checked = true;
         paisajes.checked = false;
         
         _dispatch_("change", input);
@@ -74,7 +74,7 @@
       
       it("Si seleccionamos comida y paisajes y tenemos tres imágenes con categoría comida y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
         animales.checked = true;
-        comida.checked = true;
+        comidas.checked = true;
         paisajes.checked = true;
         _dispatch_("change", input);
 
@@ -91,7 +91,7 @@
       
       it("Si seleccionamos paisajes y tenemos dos imágenes con la categoría paisajes se muestran solo las dos imágenes", () => {
         animales.checked = true;
-        comida.checked = false;
+        comidas.checked = false;
         paisajes.checked = true;
         _dispatch_("change", input);
 
@@ -111,7 +111,7 @@
         _resetDocument_();
         input = document.querySelector("input");
         animales.checked = false;
-        comida.checked = false;
+        comidas.checked = false;
         paisajes.checked = false;
         _dispatch_("change", input);
 
@@ -130,7 +130,7 @@
         _resetDocument_();
         input = document.querySelector("input");
         animales.checked = true;
-        comida.checked = true;
+        comidas.checked = true;
         paisajes.checked = true;
         _dispatch_("change", input);
 

@@ -1,6 +1,6 @@
 Ahora queremos filtrar las imágenes a través de `checkbox`s :sunglasses:, se espera que la misma:
 
-- tenga una grilla de imágenes y 3 `checkbox`s con las categorías animales, comida, paisajes; en ese orden;
+- tenga una grilla de imágenes y 3 `checkbox`s con las categorías animales, comidas, paisajes; en ese orden;
 - al seleccionar un `checkbox` se actualice la grilla, mostrando aquellas imágenes que pertenezcan a las categorías seleccionadas;
 - al deseleccionar todos los `checkbox`s se muestren todas las imágenes.
 
