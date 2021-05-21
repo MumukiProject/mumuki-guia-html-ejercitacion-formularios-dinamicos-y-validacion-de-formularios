@@ -131,12 +131,8 @@
       });
       
       it("Si el tipo de tarjeta es visa y cargamos un CCV de 3 números no se envía ningún alert", () => {
-        let button = document.querySelector('button');
-        let inputTarjeta = document.getElementById("numeroTarjeta");
-        inputTarjeta.value = 4321432143214321;
-        _dispatch_("change",  inputTarjeta);
-        let ccv = document.getElementById('ccv');
-        ccv.value = 123;
+        document.querySelector("select").value = "visa"
+        document.getElementById('ccv').value = 123;
         _dispatch_("click", button);
         _alertMessagesCount_().should.eql(0);
       });
