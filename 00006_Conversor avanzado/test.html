@@ -20,6 +20,8 @@
         input.value = 1;
         unidadOrigen.value = 1;
         unidadDestino.value = 0.01;
+        _dispatch_("change",  unidadOrigen);
+        _dispatch_("change",  unidadDestino);
         _dispatch_("click",  boton);
         document.getElementsByTagName("span")[0].should.have.trimmed.text("100");
       });
