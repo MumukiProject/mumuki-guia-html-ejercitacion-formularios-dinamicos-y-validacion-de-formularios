@@ -41,6 +41,20 @@
         document.querySelector('a').should.not.be.visible;
       });
       
+      it("Si el ckeckbox no está seleccionado el input de la url externa se deshabilita", () => {
+        let check = document.querySelectorAll('input')[3];
+        check.checked = true;
+        _dispatch_("click",  check);
+        document.querySelectorAll('input')[2].disabled.should.eq(true);
+      });
+      
+      it("Si el ckeckbox está seleccionado el link de Ver más está visible", () => {
+        let check = document.querySelectorAll('input')[3];
+        check.checked = true;
+        _dispatch_("click",  check);
+        document.querySelector('a').should.be.visible;
+      });
+      
       it("Si el ckeckbox está seleccionado el input de la url externa se habilita", () => {
         let check = document.querySelectorAll('input')[3];
         check.checked = true;
