@@ -67,11 +67,11 @@
         img2.should.be.visible;
         img3.should.be.visible;
         img4.should.be.visible;
-        /*img5.should.not.be.visible;
+        img5.should.not.be.visible;
         img6.should.not.be.visible;
         img7.should.not.be.visible;
         img8.should.not.be.visible;
-        img9.should.not.be.visible;*/
+        img9.should.not.be.visible;
       });
       
       it("Si seleccionamos comida y paisajes y tenemos tres imágenes con categoría comida y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
@@ -113,7 +113,7 @@
       });
       
       
-      it("Si no seleccionamos ningún checkbox no se muestra ninguna imagen", () => {
+      it("Si no seleccionamos ningún checkbox se visualizan todas las imágenes", () => {
         _resetDocument_();
         input = document.querySelector("input");
         animales.checked = false;
@@ -123,15 +123,15 @@
         _dispatch_("click", comidas);
         _dispatch_("click", paisajes);
 
-        img1.should.not.be.visible;
-        img2.should.not.be.visible;
-        img3.should.not.be.visible;
-        img4.should.not.be.visible;
-        img5.should.not.be.visible;
-        img6.should.not.be.visible;
-        img7.should.not.be.visible;
-        img8.should.not.be.visible;
-        img9.should.not.be.visible;
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
       });
       
       it("Si seleccionamos todos los checkbox se muestran las 9 imágenes", () => {
