@@ -93,6 +93,8 @@
       });
       
       it("Si ingresamos números en el input del nombre del títular se envía un alert con el mensaje El nombre debe contener solo letras", () => {
+        document.querySelector("select").value = "visa"
+        document.getElementById('ccv').value = 123;
         let inputNombre = document.getElementById("titular");
         let button = document.querySelector('button');
         inputNombre.value = "Ad4 Lov3lac3";
@@ -101,6 +103,8 @@
       });
       
       it("Si ingresamos solo letras en el input del nombre del títular no se envía ningún alert", () => {
+        document.querySelector("select").value = "visa"
+        document.getElementById('ccv').value = 123;
         let inputNombre = document.getElementById("titular");
         let button = document.querySelector('button');
         inputNombre.value = "Ada Lovelace";
@@ -133,7 +137,6 @@
         _dispatch_("click", button);
         _alertMessagesCount_().should.eql(0);
       });
-    
     });
   });  
 });/*#tests>*/
