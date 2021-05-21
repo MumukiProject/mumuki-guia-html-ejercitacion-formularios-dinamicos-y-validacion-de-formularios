@@ -59,7 +59,9 @@
         comidas.checked = true;
         paisajes.checked = false;
         
-        _dispatch_("change", input);
+        _dispatch_("click", animales);
+        _dispatch_("click", comidas);
+        _dispatch_("click", paisajes);
 
         img1.should.be.visible;
         img2.should.be.visible;
